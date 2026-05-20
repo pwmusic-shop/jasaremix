@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PW Music - Jasa Remix Lagu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+}
+
+.topup-section{
+    padding:40px 5%;
+    display:flex;
+    justify-content:center;
+}
+
+.topup-box{
+    width:100%;
+    max-width:500px;
+    background:#181818;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.topup-box h3{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.topup-box input,
+.topup-box select{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:14px;
+    background:#101010;
+    color:white;
+}
+
+.btn-topup{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(45deg,#ff2e63,#7c4dff);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+}
+
+
+.payment-info{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.pay-card{
+    background:#101010;
+    border:1px solid rgba(255,255,255,0.08);
+    padding:15px;
+    border-radius:16px;
+}
+
+.pay-card h4{
+    color:#ff2e63;
+    margin-bottom:6px;
+}
+
+.pay-card p{
+    font-size:18px;
+    font-weight:700;
+    color:white;
+}
+
+.pay-card small{
+    color:#aaa;
+}
+.upload-label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#ccc;
+
+    font-size:14px;
+}
+
+input[type="file"]{
+
+    background:#101010;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:14px;
+
+    width:100%;
+
+    margin-bottom:15px;
+}
+
+.nota-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.nota-box{
+    width:90%;
+    max-width:400px;
+    background:white;
+    color:black;
+    border-radius:20px;
+    padding:25px;
+}
+
+.nota-box h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.nota-item{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0;
+}
+
+.btn-download,
+.btn-print,
+.btn-close-nota{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.btn-download{
+    background:#ff2e63;
+    color:white;
+}
+
+.btn-print{
+    background:#111;
+    color:white;
+}
+
+.btn-close-nota{
+    background:#ddd;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:#121212;
+    padding:15px 5%;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 2px 15px rgba(0,0,0,0.4);
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#ff2e63;
+}
+
+.logo span{
+    color:#ffffff;
+}
+
+.search-box{
+    flex:1;
+    max-width:450px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 45px 12px 15px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+    background:#1f1f1f;
+    color:white;
+}
+
+.search-box button{
+    position:absolute;
+    right:5px;
+    top:5px;
+    border:none;
+    background:#ff2e63;
+    color:white;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 5%;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1400&auto=format&fit=crop') center/cover;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+    color:#ff2e63;
+}
+
+.hero-content p{
+    color:#ddd;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#ff2e63;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:scale(1.05);
+}
+
+/* CATEGORY */
+
+.section-title{
+    text-align:center;
+    margin:50px 0 30px;
+    font-size:35px;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    padding:0 5%;
+}
+
+.category{
+    background:#181818;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.category:hover{
+    background:#ff2e63;
+    transform:translateY(-5px);
+}
+
+.category img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+/* PRODUCTS */
+
+
+.products{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    padding:20px 5% 60px;
+}
+@media(max-width:768px){
+
+    .products{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:14px;
+
+        padding:15px;
+
+    }
+
+    .card{
+
+        border-radius:18px;
+
+        overflow:hidden;
+    }
+
+    .card img{
+
+        height:120px;
+
+        object-fit:cover;
+    }
+
+    .card-content{
+
+        padding:12px;
+    }
+
+    .card-content h3{
+
+        font-size:14px;
+
+        line-height:1.4;
+
+        margin-bottom:8px;
+    }
+
+    .price{
+
+        font-size:18px;
+
+        margin-bottom:6px;
+    }
+
+    .rating{
+
+        font-size:12px;
+
+        margin-bottom:5px;
+    }
+
+    .buy{
+
+        font-size:11px;
+
+        margin-bottom:10px;
+    }
+
+    .btn-order{
+
+        padding:10px;
+
+        font-size:12px;
+
+        border-radius:10px;
+    }
+
+}
+.card{
+    background:#181818;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:18px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#ff2e63;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:gold;
+    margin-bottom:10px;
+}
+
+.buy{
+    color:#aaa;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.btn-order{
+    display:block;
+    text-align:center;
+    background:#ff2e63;
+    padding:12px;
+    border-radius:12px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-order:hover{
+    background:#ff4b7d;
+}
+
+/* FOOTER */
+
+footer{
+    background:#121212;
+    padding:30px 5%;
+    text-align:center;
+    color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .search-box{
+        width:100%;
+        max-width:100%;
+    }
+}
+/* ========================= */
+/* MOBILE NAV MODERN */
+/* ========================= */
+
+@media(max-width:768px){
+
+    /* HEADER */
+
+    header{
+        padding:15px 4%;
+    }
+
+    .navbar{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    /* HILANGKAN TOMBOL GARIS 3 */
+
+    .menu-toggle,
+    .nav-close{
+        display:none !important;
+    }
+
+    /* NAVIGATION */
+
+    .nav-menu{
+
+        position:static !important;
+
+        width:100%;
+
+        display:flex !important;
+
+        justify-content:center;
+
+        align-items:center;
+
+        flex-wrap:nowrap;
+
+        gap:8px;
+
+        padding:0;
+
+        margin:0;
+
+        background:transparent;
+
+        box-shadow:none;
+
+        border:none;
+
+        transform:none !important;
+
+        opacity:1 !important;
+
+        visibility:visible !important;
+
+        overflow-x:auto;
+
+        scrollbar-width:none;
+    }
+
+    .nav-menu::-webkit-scrollbar{
+        display:none;
+    }
+
+    /* MENU ITEM */
+
+    .nav-menu a{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        min-width:70px;
+
+        padding:10px 8px;
+
+        border-radius:14px;
+
+        background:rgba(255,255,255,0.05);
+
+        color:white;
+
+        text-decoration:none;
+
+        font-size:11px;
+
+        font-weight:500;
+
+        transition:0.3s;
+    }
+
+    /* ICON */
+
+    .nav-menu a i{
+
+        font-size:16px;
+
+        margin-bottom:4px;
+    }
+
+    /* HOVER */
+
+    .nav-menu a:hover{
+
+        background:linear-gradient(45deg,#ff2e63,#7c4dff);
+
+        transform:translateY(-3px);
+    }
+
+}
+/* ========================= */
+/* TOP INFO */
+/* ========================= */
+
+.top-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    padding:30px 5%;
+}
+
+.info-box{
+    background:#181818;
+    padding:18px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.info-box:hover{
+    background:#ff2e63;
+    transform:translateY(-4px);
+}
+
+/* ========================= */
+/* TESTIMONI */
+/* ========================= */
+
+.testimonials{
+    padding:20px 5% 60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.testi-card{
+    background:#181818;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.testi-card img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.testi-card h3{
+    margin-bottom:10px;
+}
+
+.testi-card p{
+    color:#ccc;
+    font-size:14px;
+}
+
+/* ========================= */
+/* WHATSAPP FLOAT */
+/* ========================= */
+
+.wa-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:30px;
+    text-decoration:none;
+    color:white;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    z-index:999;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* ========================= */
+/* NOTIFIKASI */
+/* ========================= */
+
+.notif{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    background:#181818;
+    padding:15px 20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    z-index:999;
+    animation:slideNotif 4s infinite;
+}
+
+@keyframes slideNotif{
+
+    0%{
+        transform:translateX(-120%);
+        opacity:0;
+    }
+
+    20%{
+        transform:translateX(0);
+        opacity:1;
+    }
+
+    80%{
+        transform:translateX(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateX(-120%);
+        opacity:0;
+    }
+
+}
+ /* ========================= */
+ /* PROMO SLIDER */
+ /* ========================= */
+
+.promo-slider{
+    width:100%;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+}
+
+.slides{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transform:translateX(100%);
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.slides.active{
+    opacity:1;
+    transform:translateX(0);
+    z-index:2;
+}
+
+.slides.prev{
+    transform:translateX(-100%);
+}
+
+.slides img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.45);
+}
+
+.slide-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    width:90%;
+    z-index:3;
+}
+
+.slide-content h1{
+    font-size:55px;
+    margin-bottom:15px;
+    color:white;
+}
+
+.slide-content p{
+    font-size:20px;
+    color:#ddd;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .promo-slider{
+        height:320px;
+    }
+
+    .slide-content h1{
+        font-size:32px;
+    }
+
+    .slide-content p{
+        font-size:16px;
+    }
+
+}
+/* ========================= */
+/* SEARCH ICON */
+/* ========================= */
+
+.search-box button{
+    position:absolute;
+    right:6px;
+    top:6px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:linear-gradient(45deg,#ff2e63,#7c4dff);
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(255,46,99,0.35);
+}
+
+.search-box button:hover{
+    transform:scale(1.08);
+    box-shadow:0 6px 20px rgba(255,46,99,0.55);
+}
+
+/* ========================= */
+/* WHATSAPP FLOAT */
+/* ========================= */
+
+.wa-float{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#25D366,#1ebe5d);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:white;
+    font-size:36px;
+    z-index:999;
+    box-shadow:
+    0 8px 25px rgba(37,211,102,0.45),
+    0 0 0 8px rgba(37,211,102,0.08);
+
+    animation:waPulse 2s infinite;
+    transition:0.3s;
+}
+
+.wa-float:hover{
+    transform:scale(1.08);
+}
+
+/* ANIMASI */
+
+@keyframes waPulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+/* ========================= */
+/* NAVBAR MENU */
+/* ========================= */
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+/* MENU */
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#e6e6e6;
+    font-size:15px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+/* UNDERLINE ANIMATION */
+
+.nav-menu a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#ff2e63;
+    transition:0.3s;
+}
+
+.nav-menu a:hover{
+    color:#ff2e63;
+}
+
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+/* MOBILE BUTTON */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+
+/* RESPONSIVE */
+
+/* ========================= */
+/* MOBILE NAV PREMIUM */
+/* ========================= */
+/* ========================= */
+/* MOBILE NAV HORIZONTAL */
+/* ========================= */
+
+@media(max-width:768px){
+
+    /* HILANGKAN TOMBOL GARIS 3 */
+
+    .menu-toggle{
+        display:none !important;
+    }
+
+    /* NAV MENU */
+
+    .nav-menu{
+
+        position:fixed;
+
+        bottom:15px;
+        left:50%;
+
+        transform:translateX(-50%);
+
+        width:95%;
+
+        background:
+        rgba(15,15,15,0.92);
+
+        backdrop-filter:blur(18px);
+
+        border:
+        1px solid rgba(255,255,255,0.06);
+
+        border-radius:24px;
+
+        padding:12px 10px;
+
+        display:grid;
+
+        grid-template-columns:
+        repeat(4,1fr);
+
+        gap:10px;
+
+        z-index:9999;
+
+        box-shadow:
+        0 10px 35px rgba(0,0,0,0.45);
+
+        opacity:1 !important;
+        visibility:visible !important;
+    }
+
+    /* LINK */
+
+    .nav-menu a{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+        justify-content:center;
+
+        gap:6px;
+
+        text-decoration:none;
+
+        color:#d9d9d9;
+
+        font-size:11px;
+        font-weight:500;
+
+        padding:12px 6px;
+
+        border-radius:16px;
+
+        background:
+        rgba(255,255,255,0.03);
+
+        transition:0.3s;
+    }
+
+    /* ICON */
+
+    .nav-menu a i{
+
+        font-size:18px;
+
+    }
+
+    /* HOVER */
+
+    .nav-menu a:hover,
+    .nav-menu a.active{
+
+        background:
+        linear-gradient(45deg,#ff2e63,#7c4dff);
+
+        color:white;
+
+        transform:translateY(-4px);
+
+    }
+
+    /* HILANGKAN UNDERLINE */
+
+    .nav-menu a::after{
+        display:none;
+    }
+
+    /* HILANGKAN CLOSE BUTTON */
+
+    .nav-close{
+        display:none !important;
+    }
+
+    /* TAMBAH SPACE BAWAH */
+
+    body{
+        padding-bottom:100px;
+    }
+
+}
+/* ========================= */
+/* CLOSE BUTTON NAV */
+/* ========================= */
+
+.nav-close{
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-left:auto;
+    margin-bottom:10px;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(45deg,#ff2e63,#7c4dff);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 20px rgba(255,46,99,0.35);
+
+    transition:0.3s;
+}
+
+.nav-close:hover{
+
+    transform:rotate(90deg) scale(1.05);
+
+}
+
+/* HANYA MUNCUL DI HP */
+
+@media(min-width:901px){
+
+    .nav-close{
+        display:none;
+    }
+
+}
+/* ========================= */
+/* SALDO USER */
+/* ========================= */
+
+.saldo-box{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:
+    linear-gradient(45deg,#ff2e63,#7c4dff);
+
+    padding:10px 16px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 20px rgba(255,46,99,0.3);
+
+    color:white;
+}
+
+.saldo-box i{
+
+    font-size:22px;
+
+}
+
+.saldo-box small{
+
+    font-size:11px;
+
+    opacity:0.8;
+}
+
+.saldo-box h4{
+
+    font-size:16px;
+
+    margin-top:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .saldo-box{
+
+        width:100%;
+
+        justify-content:center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- GANTI HEADER LAMA -->
+<!-- ========================= -->
+
+<header>
+<!-- ========================= -->
+<!-- TAMBAHKAN TOMBOL CLOSE -->
+<!-- LETAKKAN DI DALAM nav-menu -->
+<!-- POSISI PALING ATAS -->
+<!-- ========================= -->
+
+<div class="nav-close" id="navClose">
+
+    <i class="fa-solid fa-xmark"></i>
+
+</div>
+    <div class="navbar">
+
+        <!-- LOGO -->
+        <div class="logo">
+            PW <span>Music</span>
+        </div>
+
+      <!-- ========================= -->
+<!-- NAVIGASI MOBILE 4 MENU -->
+<!-- ========================= -->
+
+<nav class="nav-menu">
+
+    <a href="#topup">
+    <i class="fas fa-wallet"></i>
+    Top Up
+</a>
+
+    <a href="#home">
+
+        <i class="fa-solid fa-house"></i>
+
+        Home
+
+    </a>
+
+    <a href="#kategori">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        Kategori
+
+    </a>
+
+    <a href="#products">
+
+        <i class="fa-solid fa-music"></i>
+
+        Produk
+
+    </a>
+
+    <a href="#contact">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        Contact
+
+    </a>
+    <div class="saldo-box">
+
+    <i class="fas fa-wallet"></i>
+
+    <div>
+        <small>Saldo</small>
+        <h4 id="saldoUser">Rp0</h4>
+    </div>
+
+    <a href="#topup">
+    <i class="fas fa-wallet"></i>
+    Top Up
+</a>
+
+</div>
+
+</nav>
+
+
+        <!-- SEARCH -->
+        <div class="search-box">
+
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari jasa remix...">
+
+            <button onclick="searchProduct()">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div class="menu-toggle" id="menuToggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="hero">
+    
+    <div class="hero-content">
+        <h1>Jasa Remix Lagu <span>Professional</span></h1>
+        <p>
+            Remix lagu modern, cinematic, slow bass, breakbeat,
+            hingga sound TikTok viral dengan kualitas premium.
+        </p>
+        <a href="#products" class="hero-btn">Lihat Price List</a>
+    </div>
+</section>
+<!-- ========================= -->
+<!-- BANNER PROMO SLIDER -->
+<!-- LETAKKAN DI BAWAH HEADER -->
+<!-- ========================= -->
+
+
+
+<h2 class="section-title">Kategori Remix</h2>
+<!-- KATEGORI -->
+<section class="categories" id="kategori"></section>
+<section class="categories">
+    
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400&auto=format&fit=crop">
+        <h3>DJ Slow Bass</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=400&auto=format&fit=crop">
+        <h3>Breakbeat</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=400&auto=format&fit=crop">
+        <h3>Cinematic</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?q=80&w=400&auto=format&fit=crop">
+        <h3>TikTok Viral</h3>
+    </div>
+
+</section>
+<!-- ========================= -->
+<!-- TAMBAHAN FITUR PREMIUM -->
+<!-- LETAKKAN DI BAWAH HEADER -->
+<!-- ========================= -->
+
+<section class="top-info">
+
+    <div class="info-box">
+        🔥 Promo Hari Ini Diskon 20%
+    </div>
+
+    <div class="info-box">
+        👀 Sedang Dilihat 18 Orang
+    </div>
+
+    <div class="info-box">
+        ✅ 5.2K Order Selesai
+    </div>
+
+    <div class="info-box">
+        ⚡ Fast Response 24 Jam
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TESTIMONI -->
+<!-- LETAKKAN DI ATAS FOOTER -->
+<!-- ========================= -->
+
+<h2 class="section-title">Testimoni Customer</h2>
+<!-- TESTIMONI -->
+<section class="testimonials" id="testimoni"></section>
+<section class="testimonials">
+
+    <div class="testi-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        <h3>Budi Remix</h3>
+        <p>"Bass nya pecah banget kualitas mantap 🔥"</p>
+    </div>
+
+    <div class="testi-card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <h3>Siska Audio</h3>
+        <p>"Proses cepat dan hasil remix cinematic keren."</p>
+    </div>
+
+    <div class="testi-card">
+        <img src="https://randomuser.me/api/portraits/men/11.jpg">
+        <h3>Rama DJ</h3>
+        <p>"Sudah langganan remix TikTok viral disini."</p>
+    </div>
+
+</section>
+
+<a href="https://wa.me/62895368416228"
+class="wa-float"
+target="_blank">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<!-- ========================= -->
+<!-- NOTIFIKASI ORDER -->
+<!-- ========================= -->
+
+<div class="notif" id="notif">
+    🔔 Andi baru saja order DJ Slow Bass
+</div>
+
+<section class="promo-slider">
+
+    <div class="slides fade active">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1400&auto=format&fit=crop">
+
+        <div class="slide-content">
+            <h1>DJ Slow Bass Premium</h1>
+            <p>Promo remix viral kualitas jernih & bass pecah 🔥</p>
+        </div>
+    </div>
+
+    <div class="slides fade">
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1400&auto=format&fit=crop">
+
+        <div class="slide-content">
+            <h1>Cinematic Soundtrack</h1>
+            <p>Soundtrack modern untuk TikTok & YouTube 🎬</p>
+        </div>
+    </div>
+
+    <div class="slides fade">
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1400&auto=format&fit=crop">
+
+        <div class="slide-content">
+            <h1>Breakbeat Full Bass</h1>
+            <p>Audio remix powerful & clean mastering ⚡</p>
+        </div>
+    </div>
+
+</section>
+
+<h2 class="section-title">Price List Jasa</h2>
+
+<section class="products" id="products">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>DJ Slow Bass Remix</h3>
+            <div class="price">Rp100.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">1.2K Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+        </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Breakbeat Full Bass</h3>
+            <div class="price">Rp150.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">980 Pembelian</div>
+            <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+        </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Cinematic Soundtrack</h3>
+            <div class="price">Rp250.000</div>
+            <div class="rating">★★★★☆</div>
+            <div class="buy">700 Pembelian</div>
+            <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+        </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Remix TikTok Viral</h3>
+            <div class="price">Rp200.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">2.1K Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+            </a>
+        </div>
+    </div>
+
+   <div class="card">
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Remix Maman Fvndy</h3>
+            <div class="price">Rp120.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">2.1K Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Premium Full Package</h3>
+            <div class="price">Rp500.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">540 Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+             Order Sekarang
+            </a>
+        </div>
+    </div>
+
+   <div class="card">
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Disco Tanah</h3>
+            <div class="price">Rp200.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">2.1K Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+            </a>
+        </div>
+    </div>
+
+       <div class="card">
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Aransemen Lagu Original</h3>
+            <div class="price">Rp500.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">2.1K Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+            </a>
+        </div>
+    </div>
+
+       <div class="card">
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3>Remix Breakbeat</h3>
+            <div class="price">Rp250.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">2.1K Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+            </a>
+        </div>
+    </div>
+
+       <div class="card">
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
+        <div class="card-content">
+            <h3> Medley 8 Lagu</h3>
+            <div class="price">Rp350.000</div>
+            <div class="rating">★★★★★</div>
+            <div class="buy">2.1K Pembelian</div>
+           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
+            Order Sekarang
+            </a>
+        </div>
+    </div>
+
+</section>
+<!-- CONTACT -->
+<footer id="contact"></footer>
+<footer>
+   
+    <!-- ========================= -->
+<!-- TOP UP SALDO -->
+<!-- ========================= -->
+
+<h2 class="section-title" id="topup">Top Up Saldo</h2>
+
+<section class="topup-section">
+
+    <div class="topup-box">
+
+        <h3>Top Up Saldo PW Music</h3>
+        <p>Rekening admin </p>
+        <p>4786 0102 0979 538 (BRI)</p>
+        <input type="text" id="namaUser" placeholder="Nama Anda">
+
+        <select id="nominal">
+            <option value="50000">Top Up Rp50.000</option>
+            <option value="100000">Top Up Rp100.000</option>
+            <option value="250000">Top Up Rp250.000</option>
+            <option value="500000">Top Up Rp500.000</option>
+        </select>
+
+        <select id="payment">
+            <option>DANA</option>
+            <option>OVO</option>
+            <option>GoPay</option>
+            <option>Bank Transfer</option>
+        </select>
+
+        <button onclick="buatNota()" class="btn-topup">
+            Top Up Sekarang
+        </button>
+
+    </div>
+<!-- ========================= -->
+<!-- POPUP NOTA -->
+<!-- ========================= -->
+
+<div class="nota-popup" id="notaPopup">
+
+    <div class="nota-box" id="notaArea">
+
+        <h2>PW Music</h2>
+
+        <p>Bukti Pembayaran / DP</p>
+
+        <hr>
+
+        <div class="nota-item">
+            <span>Nama</span>
+            <span id="notaNama"></span>
+        </div>
+
+        <div class="nota-item">
+            <span>Nominal</span>
+            <span id="notaNominal"></span>
+        </div>
+
+        <div class="nota-item">
+            <span>Metode</span>
+            <span id="notaMetode"></span>
+        </div>
+
+        <div class="nota-item">
+            <span>Status</span>
+            <span style="color:lime;">BERHASIL</span>
+        </div>
+
+        <div class="nota-item">
+            <span>Tanggal</span>
+            <span id="notaTanggal"></span>
+        </div>
+
+        <hr>
+
+        <button onclick="downloadNota()" class="btn-download">
+            Download Nota
+        </button>
+
+        <button onclick="window.print()" class="btn-print">
+            Cetak Nota
+        </button>
+
+        <button onclick="closeNota()" class="btn-close-nota">
+            Tutup
+        </button>
+
+    </div>
+</section>
+<label class="upload-label">
+    Upload Bukti Transfer
+</label>
+
+<input type="file" id="buktiTF" accept="image/*">
+</section>
+    © 2026 PW Music - Jasa Remix Lagu Professional
+</footer>
+
+<script>
+
+    /* ========================= */
+/* AUTO SLIDER BANNER */
+/* ========================= */
+
+const slides = document.querySelectorAll(".slides");
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide => {
+
+        slide.classList.remove("active");
+        slide.classList.remove("prev");
+
+    });
+
+    slides[currentSlide].classList.add("prev");
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add("active");
+
+}
+
+setInterval(() => {
+
+    let nextSlide = currentSlide + 1;
+
+    if(nextSlide >= slides.length){
+        nextSlide = 0;
+    }
+
+    showSlide(nextSlide);
+
+}, 5000);
+
+    /* ========================= */
+/* NOTIFIKASI RANDOM */
+/* ========================= */
+
+const notif = document.getElementById("notif");
+
+const orders = [
+
+"🔥 Budi baru saja order Breakbeat Full Bass",
+"🎧 Andi baru saja order DJ Slow Bass",
+"⚡ Siska baru saja order Remix TikTok Viral",
+"🎵 Rama baru saja order Cinematic Soundtrack",
+"🚀 Dika baru saja order Premium Full Package"
+
+];
+
+let index = 0;
+
+setInterval(() => {
+
+    notif.innerHTML = orders[index];
+
+    index++;
+
+    if(index >= orders.length){
+        index = 0;
+    }
+
+}, 4000);
+
+function searchProduct() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+        let title = card.querySelector("h3").innerText.toLowerCase();
+
+        if(title.includes(input)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+/* ========================= */
+/* MOBILE NAVIGATION */
+/* ========================= */
+
+const menuToggle = document.getElementById("menuToggle");
+
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.onclick = () => {
+
+    navMenu.classList.toggle("active");
+
+};
+/* ========================= */
+/* CLOSE MENU MOBILE */
+/* ========================= */
+
+const navClose = document.getElementById("navClose");
+
+navClose.onclick = () => {
+
+    navMenu.classList.remove("active");
+
+};
+
+/* AUTO CLOSE SETELAH KLIK MENU */
+
+document.querySelectorAll(".nav-menu a")
+.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+
+    });
+
+});
+/* ========================= */
+/* TOP UP NOTA */
+/* ========================= */
+
+function buatNota(){
+
+    let nama = document.getElementById("namaUser").value;
+    let nominal = document.getElementById("nominal").value;
+    let metode = document.getElementById("payment").value;
+
+    if(nama === ""){
+
+        alert("Masukkan nama terlebih dahulu");
+        return;
+
+    }
+
+    document.getElementById("notaNama").innerText = nama;
+
+    document.getElementById("notaNominal").innerText =
+    "Rp" + Number(nominal).toLocaleString("id-ID");
+
+    document.getElementById("notaMetode").innerText = metode;
+
+    document.getElementById("notaTanggal").innerText =
+    new Date().toLocaleString("id-ID");
+
+    document.getElementById("notaPopup").style.display = "flex";
+
+}
+
+/* CLOSE NOTA */
+
+function closeNota(){
+
+    document.getElementById("notaPopup").style.display = "none";
+
+}
+
+/* DOWNLOAD NOTA */
+
+function downloadNota(){
+
+    let nota = document.getElementById("notaArea").innerText;
+
+    let blob = new Blob([nota], {type:"text/plain"});
+
+    let link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+
+    link.download = "Nota-PWMusic.txt";
+
+    link.click();
+
+}
+/* ========================= */
+/* SALDO USER */
+/* ========================= */
+
+
+
+/* LOAD STORAGE */
+
+if(localStorage.getItem("saldoPW")){
+
+    saldo =
+    parseInt(localStorage.getItem("saldoPW"));
+
+    updateSaldo();
+
+}
+
+/* UPDATE SALDO */
+
+function updateSaldo(){
+
+    document.getElementById("saldoUser")
+    .innerText =
+    "Rp" + saldo.toLocaleString("id-ID");
+
+}
+
+/* ========================= */
+/* TOP UP */
+/* ========================= */
+
+{
+
+    let nama =
+    document.getElementById("namaUser").value;
+
+    let nominal =
+    parseInt(document.getElementById("nominal").value);
+
+    let metode =
+    document.getElementById("payment").value;
+
+    let bukti =
+    document.getElementById("buktiTF").files[0];
+
+    /* VALIDASI */
+
+    if(nama === ""){
+
+        alert("Masukkan nama");
+        return;
+
+    }
+
+    if(!bukti){
+
+        alert("Upload bukti transfer terlebih dahulu");
+        return;
+
+    }
+
+    /* TAMBAH SALDO */
+
+    saldo += nominal;
+
+    localStorage.setItem("saldoPW", saldo);
+
+    updateSaldo();
+
+    /* NOTA */
+
+    document.getElementById("notaNama")
+    .innerText = nama;
+
+    document.getElementById("notaNominal")
+    .innerText =
+    "Rp" + nominal.toLocaleString("id-ID");
+
+    document.getElementById("notaMetode")
+    .innerText = metode;
+
+    document.getElementById("notaTanggal")
+    .innerText =
+    new Date().toLocaleString("id-ID");
+
+    document.getElementById("notaPopup")
+    .style.display = "flex";
+
+    /* WHATSAPP */
+
+    let pesan =
+`Halo PW Music
+
+Saya sudah melakukan deposit saldo.
+
+Nama: ${nama}
+Nominal: Rp${nominal.toLocaleString("id-ID")}
+Metode: ${metode}
+
+Bukti transfer sudah saya upload.`;
+
+    window.open(
+`https://wa.me/62895368416228?text=${encodeURIComponent(pesan)}`,
+"_blank"
+    );
+
+}
+/* ========================= */
+/* AUTO TAMBAH SALDO */
+/* SETELAH UPLOAD BUKTI TF */
+/* ========================= */
+
+let saldo = 0;
+
+/* AMBIL SALDO DARI STORAGE */
+
+if(localStorage.getItem("saldoPW")){
+
+    saldo =
+    parseInt(localStorage.getItem("saldoPW"));
+
+    updateSaldo();
+
+}
+
+/* UPDATE TAMPILAN SALDO */
+
+function updateSaldo(){
+
+    document.getElementById("saldoUser")
+    .innerText =
+    "Rp" + saldo.toLocaleString("id-ID");
+
+}
+
+/* ========================= */
+/* AUTO TOP UP */
+/* ========================= */
+
+{
+
+    let nama =
+    document.getElementById("namaUser").value;
+
+    let nominal =
+    parseInt(
+        document.getElementById("nominal").value
+    );
+
+    let metode =
+    document.getElementById("payment").value;
+
+    let bukti =
+    document.getElementById("buktiTF").files[0];
+
+    /* VALIDASI */
+
+    if(nama === ""){
+
+        alert("Masukkan nama terlebih dahulu");
+        return;
+
+    }
+
+    if(!bukti){
+
+        alert("Upload bukti transfer terlebih dahulu");
+        return;
+
+    }
+
+    /* ========================= */
+    /* AUTO TAMBAH SALDO */
+    /* ========================= */
+
+    saldo += nominal;
+
+    localStorage.setItem("saldoPW", saldo);
+
+    updateSaldo();
+
+    /* ========================= */
+    /* TAMPILKAN NOTA */
+    /* ========================= */
+
+    document.getElementById("notaNama")
+    .innerText = nama;
+
+    document.getElementById("notaNominal")
+    .innerText =
+    "Rp" + nominal.toLocaleString("id-ID");
+
+    document.getElementById("notaMetode")
+    .innerText = metode;
+
+    document.getElementById("notaTanggal")
+    .innerText =
+    new Date().toLocaleString("id-ID");
+
+    document.getElementById("notaPopup")
+    .style.display = "flex";
+
+    /* ========================= */
+    /* AUTO KONFIRMASI WA */
+    /* ========================= */
+
+    let pesan =
+`Halo PW Music
+
+Saya sudah melakukan deposit saldo.
+
+Nama: ${nama}
+Nominal: Rp${nominal.toLocaleString("id-ID")}
+Metode: ${metode}
+
+Bukti transfer sudah saya upload.`;
+
+    window.open(
+
+`https://wa.me/62895368416228?text=${encodeURIComponent(pesan)}`,
+
+"_blank"
+
+    );
+
+}
+</script>
+
+</body>
+</html>
