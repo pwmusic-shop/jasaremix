@@ -1,16 +1,112 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PW Music - Jasa Remix Lagu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ========================= -->
+<!-- SEO BASIC -->
+<!-- ========================= -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description"
+content="PW Music menyediakan jasa remix DJ, cinematic soundtrack, mastering audio premium, dan remix viral TikTok dengan kualitas studio profesional.">
+
+<meta name="keywords"
+content="PW Music, remix DJ, jasa remix lagu, cinematic remix, mastering audio, DJ slow bass, breakbeat, remix TikTok">
+
+<meta name="author"
+content="PW Music">
+
+<meta name="robots"
+content="index, follow">
+
+<!-- ========================= -->
+<!-- FAVICON -->
+<!-- ========================= -->
+
+<link rel="icon"
+type="image/png"
+href="https://cdn-icons-png.flaticon.com/512/3659/3659898.png">
+
+<!-- ========================= -->
+<!-- OPEN GRAPH -->
+<!-- FACEBOOK / WHATSAPP -->
+<!-- ========================= -->
+
+<meta property="og:title"
+content="PW Music - Creative Audio Studio">
+
+<meta property="og:description"
+content="Jasa remix modern, mastering premium, cinematic soundtrack, dan audio viral TikTok.">
+
+<meta property="og:image"
+content="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://pwmusic.com">
+
+<!-- ========================= -->
+<!-- TWITTER CARD -->
+<!-- ========================= -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="PW Music - Creative Audio Studio">
+
+<meta name="twitter:description"
+content="Remix modern, cinematic soundtrack, dan mastering audio premium.">
+
+<meta name="twitter:image"
+content="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+
+<!-- ========================= -->
+<!-- PERFORMANCE -->
+<!-- ========================= -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<!-- ========================= -->
+<!-- THEME COLOR -->
+<!-- MOBILE BROWSER -->
+<!-- ========================= -->
+
+<meta name="theme-color"
+content="#00d4ff">
+<title>PW Music - Creative Audio Studio</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* IMAGE SMOOTH */
+
+img{
+    image-rendering:auto;
+    backface-visibility:hidden;
+}
+
+/* SCROLL SMOOTH */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* PERFORMANCE */
+
+*{
+    -webkit-tap-highlight-color:transparent;
+}
 *{
     margin:0;
     padding:0;
@@ -18,107 +114,554 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:#0f0f0f;
+    background:#070b14;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(10,15,25,0.88);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px 5%;
+}
+
+/* LOGO */
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#00d4ff;
+    white-space:nowrap;
+}
+
+.logo span{
     color:white;
 }
 
-.topup-section{
-    padding:40px 5%;
+/* SEARCH */
+
+.search-box{
+    flex:1;
+    max-width:500px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    height:48px;
+    border:none;
+    outline:none;
+    border-radius:40px;
+    background:#121b2b;
+    color:white;
+    padding:0 55px 0 18px;
+    font-size:14px;
+}
+
+.search-box button{
+    position:absolute;
+    right:6px;
+    top:6px;
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:50%;
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
+    color:white;
+    cursor:pointer;
+}
+
+/* SALDO */
+
+.saldo-box{
+    min-width:130px;
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
+    padding:10px 16px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 5px 20px rgba(0,212,255,0.3);
+}
+
+.saldo-box i{
+    font-size:20px;
+}
+
+.saldo-box small{
+    font-size:11px;
+    opacity:0.8;
+}
+
+.saldo-box h4{
+    font-size:15px;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    min-height:100vh;
+    padding:120px 5% 100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1400&auto=format&fit=crop') center/cover;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-content h1{
+    font-size:65px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+    color:#00d4ff;
+}
+
+.hero-content p{
+    color:#c9d1d9;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-btns{
     display:flex;
     justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+    padding:15px 32px;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.05);
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats{
+    padding:40px 5%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat-box{
+    background:#101827;
+    padding:25px;
+    border-radius:22px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.stat-box h2{
+    font-size:38px;
+    color:#00d4ff;
+    margin-bottom:8px;
+}
+
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin:70px 0 40px;
+}
+
+/* ========================= */
+/* SERVICES */
+/* ========================= */
+
+.services{
+    padding:0 5% 60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:#101827;
+    border-radius:24px;
+    padding:30px;
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.06);
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:#00d4ff;
+}
+
+.service-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.service-card p{
+    color:#c2c2c2;
+    line-height:1.8;
+}
+
+/* ========================= */
+/* PRODUCTS */
+/* ========================= */
+
+.products{
+    padding:0 5% 80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#101827;
+    border-radius:24px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:28px;
+    color:#00d4ff;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:gold;
+    margin-bottom:12px;
+}
+
+.btn-order{
+    width:100%;
+    display:block;
+    text-align:center;
+    padding:14px;
+    border-radius:14px;
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* ========================= */
+/* TESTIMONI */
+/* ========================= */
+
+.testimonials{
+    padding:0 5% 80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.testi-card{
+    background:#101827;
+    padding:25px;
+    border-radius:22px;
+}
+
+.testi-card img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.testi-card p{
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    padding:40px 5% 120px;
+    text-align:center;
+    color:#999;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* ========================= */
+/* WHATSAPP */
+/* ========================= */
+
+.wa-float{
+    position:fixed;
+    right:20px;
+    bottom:95px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    text-decoration:none;
+    z-index:999;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ========================= */
+/* BOTTOM NAV */
+/* ========================= */
+
+.bottom-nav{
+    position:fixed;
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:95%;
+    max-width:500px;
+    background:rgba(15,20,30,0.95);
+    backdrop-filter:blur(15px);
+    border-radius:24px;
+    padding:12px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    z-index:9999;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.bottom-nav a{
+    text-decoration:none;
+    color:#d6d6d6;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    padding:12px 5px;
+    border-radius:16px;
+    font-size:11px;
+    transition:0.3s;
+}
+
+.bottom-nav a i{
+    font-size:18px;
+}
+
+.bottom-nav a:hover,
+.bottom-nav a.active{
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
+    color:white;
+    transform:translateY(-3px);
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        gap:10px;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .saldo-box{
+        min-width:auto;
+        padding:10px 12px;
+    }
+
+    .saldo-box h4{
+        font-size:13px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .card img{
+        height:130px;
+    }
+
+    .card-content{
+        padding:14px;
+    }
+
+    .card-content h3{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:20px;
+    }
+
+}
+
+/* ========================= */
+/* TOPUP STYLE */
+/* ========================= */
+
+.topup-section{
+    padding:30px 5% 80px;
 }
 
 .topup-box{
-    width:100%;
     max-width:500px;
-    background:#181818;
+    margin:auto;
+    background:#101827;
     padding:30px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    border-radius:28px;
+    border:1px solid rgba(255,255,255,0.06);
 }
 
-.topup-box h3{
-    margin-bottom:20px;
-    text-align:center;
+.topup-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.topup-header i{
+    width:55px;
+    height:55px;
+    border-radius:16px;
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
 }
 
 .topup-box input,
 .topup-box select{
     width:100%;
-    padding:14px;
-    margin-bottom:15px;
+    height:52px;
     border:none;
-    border-radius:14px;
-    background:#101010;
+    outline:none;
+    border-radius:16px;
+    background:#182235;
     color:white;
+    padding:0 16px;
+    margin-bottom:15px;
+}
+
+.upload-label{
+    display:block;
+    margin-bottom:10px;
+    color:#cfcfcf;
 }
 
 .btn-topup{
     width:100%;
-    padding:14px;
+    height:54px;
     border:none;
-    border-radius:14px;
-    background:linear-gradient(45deg,#ff2e63,#7c4dff);
+    border-radius:18px;
+    background:linear-gradient(45deg,#00d4ff,#0077ff);
     color:white;
+    font-size:15px;
     font-weight:600;
     cursor:pointer;
 }
 
-
-.payment-info{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-bottom:20px;
-}
-
-.pay-card{
-    background:#101010;
-    border:1px solid rgba(255,255,255,0.08);
-    padding:15px;
-    border-radius:16px;
-}
-
-.pay-card h4{
-    color:#ff2e63;
-    margin-bottom:6px;
-}
-
-.pay-card p{
-    font-size:18px;
-    font-weight:700;
-    color:white;
-}
-
-.pay-card small{
-    color:#aaa;
-}
-.upload-label{
-
-    display:block;
-
-    margin-bottom:8px;
-
-    color:#ccc;
-
-    font-size:14px;
-}
-
-input[type="file"]{
-
-    background:#101010;
-
-    color:white;
-
-    padding:12px;
-
-    border-radius:14px;
-
-    width:100%;
-
-    margin-bottom:15px;
-}
+/* ========================= */
+/* NOTA POPUP */
+/* ========================= */
 
 .nota-popup{
     position:fixed;
@@ -127,16 +670,16 @@ input[type="file"]{
     display:none;
     align-items:center;
     justify-content:center;
-    z-index:9999;
+    z-index:99999;
 }
 
 .nota-box{
     width:90%;
-    max-width:400px;
+    max-width:420px;
     background:white;
     color:black;
-    border-radius:20px;
-    padding:25px;
+    padding:30px;
+    border-radius:24px;
 }
 
 .nota-box h2{
@@ -147,1728 +690,2846 @@ input[type="file"]{
 .nota-item{
     display:flex;
     justify-content:space-between;
-    margin:12px 0;
+    margin:15px 0;
 }
 
-.btn-download,
-.btn-print,
 .btn-close-nota{
     width:100%;
-    padding:12px;
-    margin-top:10px;
+    height:48px;
     border:none;
-    border-radius:12px;
+    border-radius:14px;
+    background:#111827;
+    color:white;
     cursor:pointer;
+    margin-top:20px;
+}
+/* ========================= */
+/* POPUP PROMO */
+/* ========================= */
+
+.promo-popup{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    rgba(0,0,0,0.75);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:999999;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.4s;
+
+}
+
+/* ACTIVE */
+
+.promo-popup.show{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+/* BOX */
+
+.promo-box{
+
+    width:90%;
+    max-width:420px;
+
+    background:
+    linear-gradient(
+    145deg,
+    #101827,
+    #0b1220
+    );
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    border-radius:30px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    position:relative;
+
+    animation:popupAnim 0.4s ease;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.45);
+
+}
+
+/* ICON */
+
+.promo-icon{
+
+    font-size:60px;
+
+    margin-bottom:18px;
+
+    animation:pulsePromo 2s infinite;
+
+}
+
+/* TITLE */
+
+.promo-box h2{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+    color:#00d4ff;
+
+}
+
+/* TEXT */
+
+.promo-box p{
+
+    color:#d7d7d7;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+/* BUTTON */
+
+.promo-btn{
+
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    color:white;
+
+    text-decoration:none;
+
     font-weight:600;
+
+    transition:0.3s;
+
 }
 
-.btn-download{
-    background:#ff2e63;
+.promo-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* CLOSE */
+
+.close-promo{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,0.08);
+
     color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
 }
 
-.btn-print{
-    background:#111;
+/* ANIMATION */
+
+@keyframes popupAnim{
+
+    from{
+
+        transform:
+        scale(0.7);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:
+        scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes pulsePromo{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.1);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+/* ========================= */
+/* CART FLOAT */
+/* ========================= */
+
+.cart-float{
+
+    position:fixed;
+
+    right:20px;
+
+    /* NAIKKAN */
+    bottom:170px;
+
+    width:62px;
+    height:62px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:999999;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.35);
+
+    animation:cartFloat 2s infinite;
+
 }
 
-.btn-close-nota{
-    background:#ddd;
+/* BADGE */
+.cart-float span{
+
+    position:absolute;
+
+    top:-3px;
+    right:-3px;
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    background:#ff004c;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:11px;
+    font-weight:bold;
+
+    color:white;
+
+}
+
+/* ANIMATION */
+@keyframes cartFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .cart-float{
+
+        width:58px;
+        height:58px;
+
+        font-size:22px;
+
+        right:16px;
+
+        /* POSISI PAS DI ATAS WA */
+        bottom:160px;
+
+    }
+
+}
+
+.cart-float span{
+
+    position:absolute;
+
+    top:-5px;
+    right:-5px;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:red;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+    font-weight:bold;
+
+}
+
+/* ========================= */
+/* CHECKOUT POPUP */
+/* ========================= */
+
+.checkout-popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,0.75);
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:999999;
+
+}
+
+.checkout-box{
+
+    width:90%;
+    max-width:430px;
+
+    background:#101827;
+
+    border-radius:28px;
+
+    padding:30px;
+
+    position:relative;
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+}
+
+.checkout-box h2{
+
+    margin-bottom:25px;
+
+}
+
+/* CLOSE */
+
+.close-checkout{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#182235;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/* CART ITEM */
+
+.cart-item{
+
+    background:#182235;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    margin-bottom:12px;
+
+}
+
+.cart-item h4{
+
+    margin-bottom:6px;
+
+}
+
+.cart-item p{
+
+    color:#00d4ff;
+
+    font-size:14px;
+
+}
+
+/* PACKAGE */
+
+.package-box{
+
+    margin-top:20px;
+
+}
+
+.package-box label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.package-box select{
+
+    width:100%;
+    height:50px;
+
+    border:none;
+    outline:none;
+
+    border-radius:14px;
+
+    background:#182235;
+
+    color:white;
+
+    padding:0 14px;
+
+}
+
+/* TOTAL */
+
+.checkout-total{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    margin:25px 0;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:#182235;
+
+}
+
+.checkout-total h3{
+
+    color:#00d4ff;
+
+    font-size:28px;
+
+}
+
+/* BUTTON */
+
+.btn-checkout{
+
+    width:100%;
+    height:54px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+/* ========================= */
+/* REKENING BOX */
+/* ========================= */
+
+.rekening-box{
+
+    background:#182235;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
 }
 
 /* HEADER */
 
-header{
-    width:100%;
-    background:#121212;
-    padding:15px 5%;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 2px 15px rgba(0,0,0,0.4);
-}
-
-.navbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#ff2e63;
-}
-
-.logo span{
-    color:#ffffff;
-}
-
-.search-box{
-    flex:1;
-    max-width:450px;
-    position:relative;
-}
-
-.search-box input{
-    width:100%;
-    padding:12px 45px 12px 15px;
-    border:none;
-    border-radius:30px;
-    outline:none;
-    background:#1f1f1f;
-    color:white;
-}
-
-.search-box button{
-    position:absolute;
-    right:5px;
-    top:5px;
-    border:none;
-    background:#ff2e63;
-    color:white;
-    width:35px;
-    height:35px;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:16px;
-}
-
-/* HERO */
-
-.hero{
-    width:100%;
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:60px 5%;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1400&auto=format&fit=crop') center/cover;
-}
-
-.hero-content h1{
-    font-size:55px;
-    margin-bottom:20px;
-}
-
-.hero-content h1 span{
-    color:#ff2e63;
-}
-
-.hero-content p{
-    color:#ddd;
-    max-width:700px;
-    margin:auto;
-    margin-bottom:30px;
-}
-
-.hero-btn{
-    display:inline-block;
-    padding:14px 35px;
-    background:#ff2e63;
-    color:white;
-    text-decoration:none;
-    border-radius:40px;
-    transition:0.3s;
-}
-
-.hero-btn:hover{
-    transform:scale(1.05);
-}
-
-/* CATEGORY */
-
-.section-title{
-    text-align:center;
-    margin:50px 0 30px;
-    font-size:35px;
-}
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-    padding:0 5%;
-}
-
-.category{
-    background:#181818;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    transition:0.3s;
-    cursor:pointer;
-}
-
-.category:hover{
-    background:#ff2e63;
-    transform:translateY(-5px);
-}
-
-.category img{
-    width:70px;
-    height:70px;
-    object-fit:cover;
-    border-radius:50%;
-    margin-bottom:15px;
-}
-
-/* PRODUCTS */
-
-
-.products{
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:25px;
-
-    padding:20px 5% 60px;
-}
-@media(max-width:768px){
-
-    .products{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-        gap:14px;
-
-        padding:15px;
-
-    }
-
-    .card{
-
-        border-radius:18px;
-
-        overflow:hidden;
-    }
-
-    .card img{
-
-        height:120px;
-
-        object-fit:cover;
-    }
-
-    .card-content{
-
-        padding:12px;
-    }
-
-    .card-content h3{
-
-        font-size:14px;
-
-        line-height:1.4;
-
-        margin-bottom:8px;
-    }
-
-    .price{
-
-        font-size:18px;
-
-        margin-bottom:6px;
-    }
-
-    .rating{
-
-        font-size:12px;
-
-        margin-bottom:5px;
-    }
-
-    .buy{
-
-        font-size:11px;
-
-        margin-bottom:10px;
-    }
-
-    .btn-order{
-
-        padding:10px;
-
-        font-size:12px;
-
-        border-radius:10px;
-    }
-
-}
-.card{
-    background:#181818;
-    border-radius:20px;
-    overflow:hidden;
-    transition:0.3s;
-    position:relative;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:18px;
-}
-
-.card-content h3{
-    margin-bottom:10px;
-}
-
-.price{
-    color:#ff2e63;
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.rating{
-    color:gold;
-    margin-bottom:10px;
-}
-
-.buy{
-    color:#aaa;
-    font-size:14px;
-    margin-bottom:15px;
-}
-
-.btn-order{
-    display:block;
-    text-align:center;
-    background:#ff2e63;
-    padding:12px;
-    border-radius:12px;
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-}
-
-.btn-order:hover{
-    background:#ff4b7d;
-}
-
-/* FOOTER */
-
-footer{
-    background:#121212;
-    padding:30px 5%;
-    text-align:center;
-    color:#aaa;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .hero-content h1{
-        font-size:38px;
-    }
-
-    .navbar{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .search-box{
-        width:100%;
-        max-width:100%;
-    }
-}
-/* ========================= */
-/* MOBILE NAV MODERN */
-/* ========================= */
-
-@media(max-width:768px){
-
-    /* HEADER */
-
-    header{
-        padding:15px 4%;
-    }
-
-    .navbar{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-    }
-
-    /* HILANGKAN TOMBOL GARIS 3 */
-
-    .menu-toggle,
-    .nav-close{
-        display:none !important;
-    }
-
-    /* NAVIGATION */
-
-    .nav-menu{
-
-        position:static !important;
-
-        width:100%;
-
-        display:flex !important;
-
-        justify-content:center;
-
-        align-items:center;
-
-        flex-wrap:nowrap;
-
-        gap:8px;
-
-        padding:0;
-
-        margin:0;
-
-        background:transparent;
-
-        box-shadow:none;
-
-        border:none;
-
-        transform:none !important;
-
-        opacity:1 !important;
-
-        visibility:visible !important;
-
-        overflow-x:auto;
-
-        scrollbar-width:none;
-    }
-
-    .nav-menu::-webkit-scrollbar{
-        display:none;
-    }
-
-    /* MENU ITEM */
-
-    .nav-menu a{
-
-        display:flex;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        justify-content:center;
-
-        min-width:70px;
-
-        padding:10px 8px;
-
-        border-radius:14px;
-
-        background:rgba(255,255,255,0.05);
-
-        color:white;
-
-        text-decoration:none;
-
-        font-size:11px;
-
-        font-weight:500;
-
-        transition:0.3s;
-    }
-
-    /* ICON */
-
-    .nav-menu a i{
-
-        font-size:16px;
-
-        margin-bottom:4px;
-    }
-
-    /* HOVER */
-
-    .nav-menu a:hover{
-
-        background:linear-gradient(45deg,#ff2e63,#7c4dff);
-
-        transform:translateY(-3px);
-    }
-
-}
-/* ========================= */
-/* TOP INFO */
-/* ========================= */
-
-.top-info{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-    padding:30px 5%;
-}
-
-.info-box{
-    background:#181818;
-    padding:18px;
-    border-radius:15px;
-    text-align:center;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.info-box:hover{
-    background:#ff2e63;
-    transform:translateY(-4px);
-}
-
-/* ========================= */
-/* TESTIMONI */
-/* ========================= */
-
-.testimonials{
-    padding:20px 5% 60px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.testi-card{
-    background:#181818;
-    padding:25px;
-    border-radius:20px;
-    text-align:center;
-}
-
-.testi-card img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
-}
-
-.testi-card h3{
-    margin-bottom:10px;
-}
-
-.testi-card p{
-    color:#ccc;
-    font-size:14px;
-}
-
-/* ========================= */
-/* WHATSAPP FLOAT */
-/* ========================= */
-
-.wa-float{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    font-size:30px;
-    text-decoration:none;
-    color:white;
-    box-shadow:0 5px 20px rgba(0,0,0,0.4);
-    z-index:999;
-    animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-    0%{
-        transform:scale(1);
-    }
-    50%{
-        transform:scale(1.1);
-    }
-    100%{
-        transform:scale(1);
-    }
-}
-
-/* ========================= */
-/* NOTIFIKASI */
-/* ========================= */
-
-.notif{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    background:#181818;
-    padding:15px 20px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.4);
-    z-index:999;
-    animation:slideNotif 4s infinite;
-}
-
-@keyframes slideNotif{
-
-    0%{
-        transform:translateX(-120%);
-        opacity:0;
-    }
-
-    20%{
-        transform:translateX(0);
-        opacity:1;
-    }
-
-    80%{
-        transform:translateX(0);
-        opacity:1;
-    }
-
-    100%{
-        transform:translateX(-120%);
-        opacity:0;
-    }
-
-}
- /* ========================= */
- /* PROMO SLIDER */
- /* ========================= */
-
-.promo-slider{
-    width:100%;
-    height:500px;
-    position:relative;
-    overflow:hidden;
-}
-
-.slides{
-    position:absolute;
-    width:100%;
-    height:100%;
-    opacity:0;
-    transform:translateX(100%);
-    transition:
-    opacity 1s ease,
-    transform 1s ease;
-}
-
-.slides.active{
-    opacity:1;
-    transform:translateX(0);
-    z-index:2;
-}
-
-.slides.prev{
-    transform:translateX(-100%);
-}
-
-.slides img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    filter:brightness(0.45);
-}
-
-.slide-content{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    width:90%;
-    z-index:3;
-}
-
-.slide-content h1{
-    font-size:55px;
-    margin-bottom:15px;
-    color:white;
-}
-
-.slide-content p{
-    font-size:20px;
-    color:#ddd;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .promo-slider{
-        height:320px;
-    }
-
-    .slide-content h1{
-        font-size:32px;
-    }
-
-    .slide-content p{
-        font-size:16px;
-    }
-
-}
-/* ========================= */
-/* SEARCH ICON */
-/* ========================= */
-
-.search-box button{
-    position:absolute;
-    right:6px;
-    top:6px;
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:linear-gradient(45deg,#ff2e63,#7c4dff);
-    color:white;
-    cursor:pointer;
-    font-size:16px;
-    transition:0.3s;
-    box-shadow:0 4px 15px rgba(255,46,99,0.35);
-}
-
-.search-box button:hover{
-    transform:scale(1.08);
-    box-shadow:0 6px 20px rgba(255,46,99,0.55);
-}
-
-/* ========================= */
-/* WHATSAPP FLOAT */
-/* ========================= */
-
-.wa-float{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:68px;
-    height:68px;
-    border-radius:50%;
-    background:linear-gradient(45deg,#25D366,#1ebe5d);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    color:white;
-    font-size:36px;
-    z-index:999;
-    box-shadow:
-    0 8px 25px rgba(37,211,102,0.45),
-    0 0 0 8px rgba(37,211,102,0.08);
-
-    animation:waPulse 2s infinite;
-    transition:0.3s;
-}
-
-.wa-float:hover{
-    transform:scale(1.08);
-}
-
-/* ANIMASI */
-
-@keyframes waPulse{
-
-    0%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.12);
-    }
-
-    100%{
-        transform:scale(1);
-    }
-
-}
-/* ========================= */
-/* NAVBAR MENU */
-/* ========================= */
-
-.navbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-}
-
-/* MENU */
-
-.nav-menu{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-
-.nav-menu a{
-    text-decoration:none;
-    color:#e6e6e6;
-    font-size:15px;
-    font-weight:500;
-    position:relative;
-    transition:0.3s;
-}
-
-/* UNDERLINE ANIMATION */
-
-.nav-menu a::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0%;
-    height:2px;
-    background:#ff2e63;
-    transition:0.3s;
-}
-
-.nav-menu a:hover{
-    color:#ff2e63;
-}
-
-.nav-menu a:hover::after{
-    width:100%;
-}
-
-/* MOBILE BUTTON */
-
-.menu-toggle{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    color:white;
-}
-
-/* RESPONSIVE */
-
-/* ========================= */
-/* MOBILE NAV PREMIUM */
-/* ========================= */
-/* ========================= */
-/* MOBILE NAV HORIZONTAL */
-/* ========================= */
-
-@media(max-width:768px){
-
-    /* HILANGKAN TOMBOL GARIS 3 */
-
-    .menu-toggle{
-        display:none !important;
-    }
-
-    /* NAV MENU */
-
-    .nav-menu{
-
-        position:fixed;
-
-        bottom:15px;
-        left:50%;
-
-        transform:translateX(-50%);
-
-        width:95%;
-
-        background:
-        rgba(15,15,15,0.92);
-
-        backdrop-filter:blur(18px);
-
-        border:
-        1px solid rgba(255,255,255,0.06);
-
-        border-radius:24px;
-
-        padding:12px 10px;
-
-        display:grid;
-
-        grid-template-columns:
-        repeat(4,1fr);
-
-        gap:10px;
-
-        z-index:9999;
-
-        box-shadow:
-        0 10px 35px rgba(0,0,0,0.45);
-
-        opacity:1 !important;
-        visibility:visible !important;
-    }
-
-    /* LINK */
-
-    .nav-menu a{
-
-        display:flex;
-
-        flex-direction:column;
-
-        align-items:center;
-        justify-content:center;
-
-        gap:6px;
-
-        text-decoration:none;
-
-        color:#d9d9d9;
-
-        font-size:11px;
-        font-weight:500;
-
-        padding:12px 6px;
-
-        border-radius:16px;
-
-        background:
-        rgba(255,255,255,0.03);
-
-        transition:0.3s;
-    }
-
-    /* ICON */
-
-    .nav-menu a i{
-
-        font-size:18px;
-
-    }
-
-    /* HOVER */
-
-    .nav-menu a:hover,
-    .nav-menu a.active{
-
-        background:
-        linear-gradient(45deg,#ff2e63,#7c4dff);
-
-        color:white;
-
-        transform:translateY(-4px);
-
-    }
-
-    /* HILANGKAN UNDERLINE */
-
-    .nav-menu a::after{
-        display:none;
-    }
-
-    /* HILANGKAN CLOSE BUTTON */
-
-    .nav-close{
-        display:none !important;
-    }
-
-    /* TAMBAH SPACE BAWAH */
-
-    body{
-        padding-bottom:100px;
-    }
-
-}
-/* ========================= */
-/* CLOSE BUTTON NAV */
-/* ========================= */
-
-.nav-close{
-
-    width:45px;
-    height:45px;
+.rekening-header{
 
     display:flex;
+
     align-items:center;
-    justify-content:center;
 
-    margin-left:auto;
-    margin-bottom:10px;
+    gap:14px;
 
-    border-radius:14px;
+    margin-bottom:18px;
+
+}
+
+.rekening-header i{
+
+    width:55px;
+    height:55px;
+
+    border-radius:16px;
 
     background:
-    linear-gradient(45deg,#ff2e63,#7c4dff);
+    linear-gradient(45deg,#00d4ff,#0077ff);
 
-    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     font-size:22px;
 
-    cursor:pointer;
-
-    box-shadow:
-    0 8px 20px rgba(255,46,99,0.35);
-
-    transition:0.3s;
 }
 
-.nav-close:hover{
+.rekening-header h3{
 
-    transform:rotate(90deg) scale(1.05);
+    margin-bottom:3px;
 
 }
 
-/* HANYA MUNCUL DI HP */
+.rekening-header p{
 
-@media(min-width:901px){
+    color:#cfcfcf;
 
-    .nav-close{
-        display:none;
-    }
+    font-size:13px;
 
 }
-/* ========================= */
-/* SALDO USER */
-/* ========================= */
 
-.saldo-box{
+/* NUMBER */
+
+.rekening-number{
+
+    width:100%;
+
+    height:58px;
+
+    border-radius:16px;
+
+    background:#101827;
 
     display:flex;
     align-items:center;
-    gap:10px;
+    justify-content:center;
+
+    font-size:22px;
+    font-weight:700;
+
+    color:#00d4ff;
+
+    letter-spacing:2px;
+
+    margin-bottom:16px;
+
+}
+
+/* BUTTON */
+
+.btn-copy{
+
+    width:100%;
+    height:54px;
+
+    border:none;
+
+    border-radius:16px;
 
     background:
-    linear-gradient(45deg,#ff2e63,#7c4dff);
+    linear-gradient(45deg,#00d4ff,#0077ff);
 
-    padding:10px 16px;
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    transition:0.3s;
+
+}
+
+.btn-copy:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(0,212,255,0.3);
+
+}
+/* ========================= */
+/* CART ITEM */
+/* ========================= */
+
+.cart-item{
+
+    background:#182235;
 
     border-radius:18px;
 
-    box-shadow:
-    0 5px 20px rgba(255,46,99,0.3);
+    padding:15px;
+
+    margin-bottom:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+}
+
+/* INFO */
+
+.cart-info h4{
+
+    margin-bottom:4px;
+
+    font-size:15px;
+
+}
+
+.cart-info p{
+
+    color:#00d4ff;
+
+    font-size:13px;
+
+}
+
+/* QTY BOX */
+
+.qty-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+/* BUTTON */
+
+.qty-box button{
+
+    width:32px;
+    height:32px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
 
     color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
 }
 
-.saldo-box i{
+/* QTY TEXT */
 
-    font-size:22px;
+.qty-box span{
+
+    min-width:20px;
+
+    text-align:center;
+
+    font-weight:600;
 
 }
 
-.saldo-box small{
+/* REMOVE */
 
-    font-size:11px;
+.btn-remove{
 
-    opacity:0.8;
+    width:38px;
+    height:38px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff2e63;
+
+    color:white;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
 }
 
-.saldo-box h4{
+/* MOBILE */
 
-    font-size:16px;
+@media(max-width:480px){
 
-    margin-top:2px;
+    .cart-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .qty-box{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .btn-remove{
+
+        width:100%;
+
+    }
+
+}
+/* RESET SEARCH */
+/* ========================= */
+/* SEARCH BOX PREMIUM */
+/* ========================= */
+
+.search-box{
+
+    flex:1;
+
+    max-width:520px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/* INPUT */
+
+.search-box input{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+    outline:none;
+
+    border-radius:50px;
+
+    background:
+    rgba(18,27,43,0.95);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    padding:
+    0 105px 0 20px;
+
+    font-size:14px;
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    transition:0.3s;
+
+    box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.25);
+
+}
+
+/* FOCUS */
+
+.search-box input:focus{
+
+    border-color:#00d4ff;
+
+    box-shadow:
+    0 0 15px rgba(0,212,255,0.25);
+
+}
+
+/* PLACEHOLDER */
+
+.search-box input::placeholder{
+
+    color:#8fa3bf;
+
+}
+
+/* SEARCH BUTTON */
+
+.search-box button{
+
+    position:absolute;
+
+    top:6px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+/* SEARCH ICON */
+
+.search-box button:first-of-type{
+
+    right:8px;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    color:white;
+
+    box-shadow:
+    0 5px 15px rgba(0,212,255,0.3);
+
+}
+
+/* RESET BUTTON */
+
+.btn-reset-search{
+
+    position:absolute;
+
+    right:55px;
+    top:6px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#1c2740;
+
+    color:#d7d7d7;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+/* HOVER */
+
+.search-box button:hover,
+.btn-reset-search:hover{
+
+    transform:
+    translateY(-2px)
+    scale(1.05);
+
+}
+
+/* RESET HOVER */
+
+.btn-reset-search:hover{
+
+    background:#00d4ff;
+
+    color:white;
+
+    transform:
+    rotate(180deg)
+    scale(1.05);
+
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-    .saldo-box{
+    .search-box{
 
-        width:100%;
+        max-width:100%;
 
-        justify-content:center;
+    }
+
+    .search-box input{
+
+        height:48px;
+
+        font-size:13px;
+
+        padding:
+        0 95px 0 16px;
+
+    }
+
+    .search-box button,
+    .btn-reset-search{
+
+        width:36px;
+        height:36px;
+
+        top:6px;
+
+    }
+
+    .btn-reset-search{
+
+        right:48px;
+
+    }
+
+}
+/* ========================= */
+/* CLAIM PROMO */
+/* ========================= */
+
+.claim-promo{
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:30px auto;
+
+    padding:24px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+    145deg,
+    #101827,
+    #0b1220
+    );
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.35);
+
+    animation:
+    glowPromo 2s infinite alternate;
+
+}
+
+/* GLOW EFFECT */
+
+.claim-promo::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-50px;
+    right:-50px;
+
+    width:180px;
+    height:180px;
+
+    background:
+    rgba(0,212,255,0.15);
+
+    border-radius:50%;
+
+    filter:blur(40px);
+
+}
+
+/* ICON */
+
+.claim-icon{
+
+    min-width:85px;
+    height:85px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+
+    animation:
+    pulsePromo 1.5s infinite;
+
+}
+
+/* CONTENT */
+
+.claim-content{
+
+    flex:1;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.claim-content small{
+
+    color:#00d4ff;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+.claim-content h3{
+
+    font-size:30px;
+
+    margin:
+    8px 0 10px;
+
+}
+
+.claim-content p{
+
+    color:#cfcfcf;
+
+    line-height:1.7;
+
+    margin-bottom:16px;
+
+}
+
+/* SLOT */
+
+.slot-box{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:
+    10px 16px;
+
+    border-radius:40px;
+
+    background:
+    rgba(255,255,255,0.06);
+
+    margin-bottom:18px;
+
+    font-size:14px;
+
+}
+
+/* LIVE DOT */
+
+.slot-live{
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00ff66;
+
+    animation:
+    blinkLive 1s infinite;
+
+}
+
+/* BUTTON */
+
+.claim-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    height:52px;
+
+    padding:
+    0 26px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+.claim-btn:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(0,212,255,0.3);
+
+}
+
+/* ANIMATION */
+
+@keyframes pulsePromo{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
     }
 
 }
 
+@keyframes blinkLive{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0.3;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+@keyframes glowPromo{
+
+    from{
+
+        box-shadow:
+        0 10px 30px rgba(0,212,255,0.15);
+
+    }
+
+    to{
+
+        box-shadow:
+        0 15px 40px rgba(0,212,255,0.3);
+
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .claim-promo{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:22px;
+
+    }
+
+    .claim-content h3{
+
+        font-size:24px;
+
+    }
+
+}
+/* ========================= */
+/* HERO TITLE */
+/* ========================= */
+
+.hero-title{
+
+    font-size:58px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+/* TEXT ANIMATION */
+
+#changingText{
+
+    display:inline-block;
+
+    background:
+    linear-gradient(
+    45deg,
+    #00d4ff,
+    #00ffae
+    );
+
+    /* STANDARD */
+    background-clip:text;
+
+    /* WEBKIT */
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    -webkit-text-fill-color:transparent;
+
+    transition:0.5s;
+
+}
+/* FADE IN */
+
+.fade-in{
+
+    animation:
+    fadeInText 0.6s ease;
+
+}
+
+/* FADE OUT */
+
+.fade-out{
+
+    animation:
+    fadeOutText 0.5s ease;
+
+}
+
+/* ANIMATION */
+
+@keyframes fadeInText{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+@keyframes fadeOutText{
+
+    from{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+        translateY(-10px);
+
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero-title{
+
+        font-size:42px;
+
+    }
+
+}
+/* ========================= */
+/* LIVE VISITOR */
+/* ========================= */
+
+.live-visitor{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    width:max-content;
+
+    margin:20px auto;
+
+    padding:
+    12px 20px;
+
+    border-radius:50px;
+
+    background:
+    rgba(16,24,39,0.95);
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:14px;
+    font-weight:500;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+
+    animation:
+    visitorGlow 2s infinite alternate;
+
+}
+
+/* LIVE DOT */
+
+.live-dot{
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    background:#00ff66;
+
+    box-shadow:
+    0 0 10px #00ff66;
+
+    animation:
+    liveBlink 1s infinite;
+
+}
+
+/* NUMBER */
+
+#visitorCount{
+
+    color:#00d4ff;
+
+    font-weight:700;
+
+    font-size:16px;
+
+}
+
+/* GLOW */
+
+@keyframes visitorGlow{
+
+    from{
+
+        box-shadow:
+        0 10px 25px rgba(0,212,255,0.15);
+
+    }
+
+    to{
+
+        box-shadow:
+        0 15px 35px rgba(0,212,255,0.3);
+
+    }
+
+}
+
+/* BLINK */
+
+@keyframes liveBlink{
+
+    0%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:0.4;
+        transform:scale(1.2);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .live-visitor{
+
+        font-size:12px;
+
+        padding:
+        10px 16px;
+
+    }
+
+}
+/* ========================= */
+/* PRICING SECTION */
+/* ========================= */
+
+.pricing-section{
+
+    padding:80px 5%;
+
+}
+
+/* TITLE */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:50px;
+
+}
+
+/* GRID */
+
+.pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:28px;
+
+}
+
+/* CARD */
+
+.pricing-card{
+
+    position:relative;
+
+    background:
+    linear-gradient(
+    145deg,
+    #101827,
+    #0b1220
+    );
+
+    border-radius:30px;
+
+    padding:35px 28px;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    transition:0.4s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.25);
+
+}
+
+/* HOVER */
+
+.pricing-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(0,212,255,0.2);
+
+}
+
+/* POPULAR */
+
+.popular-tag{
+
+    position:absolute;
+
+    top:15px;
+    right:-40px;
+
+    background:
+    linear-gradient(45deg,#ff8800,#ff0055);
+
+    color:white;
+
+    padding:
+    8px 45px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transform:
+    rotate(35deg);
+
+}
+
+/* BADGE */
+
+.pricing-badge{
+
+    width:max-content;
+
+    padding:
+    8px 16px;
+
+    border-radius:50px;
+
+    background:#1b2a45;
+
+    color:#00d4ff;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+/* PREMIUM */
+
+.premium-badge{
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    color:white;
+
+}
+
+/* VIP */
+
+.vip-badge{
+
+    background:
+    linear-gradient(45deg,#ffae00,#ff6600);
+
+    color:white;
+
+}
+
+/* TITLE */
+
+.pricing-card h3{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+}
+
+/* PRICE */
+
+.pricing-price{
+
+    font-size:46px;
+
+    font-weight:800;
+
+    color:#00ffae;
+
+    margin-bottom:25px;
+
+}
+
+/* LIST */
+
+.pricing-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 30px;
+
+}
+
+.pricing-card ul li{
+
+    margin-bottom:14px;
+
+    color:#d6d6d6;
+
+    font-size:15px;
+
+}
+
+/* BUTTON */
+
+.pricing-btn{
+
+    width:100%;
+
+    height:54px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    background:
+    linear-gradient(45deg,#00d4ff,#0077ff);
+
+    color:white;
+
+    transition:0.3s;
+
+}
+
+/* PREMIUM BUTTON */
+
+.premium-btn{
+
+    background:
+    linear-gradient(45deg,#ff0055,#ff8800);
+
+}
+
+/* HOVER */
+
+.pricing-btn:hover{
+
+    transform:
+    scale(1.03);
+
+}
+
+/* PREMIUM CARD */
+
+.premium-card{
+
+    border:
+    1px solid rgba(0,212,255,0.25);
+
+    animation:
+    premiumGlow 2s infinite alternate;
+
+}
+
+/* ANIMATION */
+
+@keyframes premiumGlow{
+
+    from{
+
+        box-shadow:
+        0 15px 35px rgba(0,212,255,0.15);
+
+    }
+
+    to{
+
+        box-shadow:
+        0 20px 45px rgba(0,212,255,0.35);
+
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .section-title{
+
+        font-size:32px;
+
+    }
+
+    .pricing-card{
+
+        padding:28px 22px;
+
+    }
+
+    .pricing-price{
+
+        font-size:38px;
+
+    }
+
+}
+/* ========================= */
+/* FAKE ORDER */
+/* ========================= */
+
+.fake-order{
+
+    position:fixed;
+
+    left:20px;
+    bottom:100px;
+
+    width:320px;
+
+    background:
+    rgba(16,24,39,0.96);
+
+    backdrop-filter:blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    border-radius:22px;
+
+    padding:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    z-index:999999;
+
+    transform:
+    translateX(-400px);
+
+    opacity:0;
+
+    transition:0.6s ease;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.35);
+
+}
+
+/* SHOW */
+
+.fake-order.show{
+
+    transform:
+    translateX(0);
+
+    opacity:1;
+
+}
+
+/* IMAGE */
+
+.fake-order img{
+
+    width:68px;
+    height:68px;
+
+    border-radius:16px;
+
+    object-fit:cover;
+
+}
+
+/* CONTENT */
+
+.fake-order-content{
+
+    flex:1;
+
+}
+
+.fake-order-content h4{
+
+    font-size:15px;
+
+    margin-bottom:5px;
+
+    color:white;
+
+}
+
+.fake-order-content p{
+
+    font-size:13px;
+
+    color:#cfcfcf;
+
+    line-height:1.5;
+
+}
+
+/* PRODUCT */
+
+#fakeOrderProduct{
+
+    color:#00d4ff;
+
+    font-weight:700;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .fake-order{
+
+        width:90%;
+
+        left:5%;
+
+        bottom:90px;
+
+    }
+
+}
+.fake-order{
+
+    transform:translateX(-400px);
+
+    opacity:0;
+
+    transition:0.5s;
+
+}
+
+.fake-order.show{
+
+    transform:translateX(0);
+
+    opacity:1;
+
+}
 </style>
 </head>
 
 <body>
 
-<!-- ========================= -->
-<!-- GANTI HEADER LAMA -->
-<!-- ========================= -->
+<!-- HEADER -->
 
 <header>
-<!-- ========================= -->
-<!-- TAMBAHKAN TOMBOL CLOSE -->
-<!-- LETAKKAN DI DALAM nav-menu -->
-<!-- POSISI PALING ATAS -->
-<!-- ========================= -->
 
-<div class="nav-close" id="navClose">
-
-    <i class="fa-solid fa-xmark"></i>
-
-</div>
     <div class="navbar">
 
-        <!-- LOGO -->
         <div class="logo">
             PW <span>Music</span>
         </div>
 
-      <!-- ========================= -->
-<!-- NAVIGASI MOBILE 4 MENU -->
+        <div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Cari remix favorit...">
+<button type="button" onclick="searchProduct()">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+        </div>
+<button
+class="btn-reset-search"
+onclick="resetSearch()">
+
+    <i class="fa-solid fa-rotate"></i>
+
+</button>
+        <div class="saldo-box">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <div>
+                <small>Saldo</small>
+                <h4>0</h4>
+            </div>
+
+        </div>
+
+    </div>
+<!-- ========================= -->
+<!-- CART BUTTON -->
 <!-- ========================= -->
 
-<nav class="nav-menu">
+<div class="cart-float" onclick="openCart()">
 
-    <a href="#topup">
-    <i class="fas fa-wallet"></i>
-    Top Up
-</a>
+    <i class="fa-solid fa-cart-shopping"></i>
 
-    <a href="#home">
-
-        <i class="fa-solid fa-house"></i>
-
-        Home
-
-    </a>
-
-    <a href="#kategori">
-
-        <i class="fa-solid fa-layer-group"></i>
-
-        Kategori
-
-    </a>
-
-    <a href="#products">
-
-        <i class="fa-solid fa-music"></i>
-
-        Produk
-
-    </a>
-
-    <a href="#contact">
-
-        <i class="fa-brands fa-whatsapp"></i>
-
-        Contact
-
-    </a>
-    <div class="saldo-box">
-
-    <i class="fas fa-wallet"></i>
-
-    <div>
-        <small>Saldo</small>
-        <h4 id="saldoUser">Rp0</h4>
-    </div>
-
-    <a href="#topup">
-    <i class="fas fa-wallet"></i>
-    Top Up
-</a>
+    <span id="cartCount">
+        0
+    </span>
 
 </div>
 
-</nav>
+<!-- ========================= -->
+<!-- CHECKOUT POPUP -->
+<!-- ========================= -->
 
+<div class="checkout-popup" id="checkoutPopup">
 
-        <!-- SEARCH -->
-        <div class="search-box">
+    <div class="checkout-box">
 
-            <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari jasa remix...">
+        <button class="close-checkout"
+        onclick="closeCart()">
 
-            <button onclick="searchProduct()">
+            <i class="fa-solid fa-xmark"></i>
 
-                <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
 
-            </button>
+        <h2>
+            🛒 Checkout Remix
+        </h2>
+
+        <!-- CART ITEMS -->
+        <div id="cartItems"></div>
+
+        <!-- PACKAGE -->
+        <div class="package-box">
+
+            <label>
+                Pilih Paket Remix
+            </label>
+
+            <select id="paketSelect"
+            onchange="updateTotal()">
+
+                <option value="0">
+                    Paket Standard (+0)
+                </option>
+
+                <option value="50000">
+                    Paket Premium (+50K)
+                </option>
+
+                <option value="100000">
+                    Paket Ultra HQ (+100K)
+                </option>
+
+            </select>
 
         </div>
 
-        <!-- MENU MOBILE -->
-        <div class="menu-toggle" id="menuToggle">
+        <!-- TOTAL -->
+        <div class="checkout-total">
 
-            <i class="fa-solid fa-bars"></i>
+            <span>Total</span>
+
+            <h3 id="totalPrice">
+                Rp0
+            </h3>
 
         </div>
+
+        <!-- BUTTON -->
+        <button class="btn-checkout"
+        onclick="checkoutWA()">
+
+            Checkout Sekarang
+
+        </button>
 
     </div>
 
+</div>
 </header>
 
-<section class="hero">
-    
+<!-- HERO -->
+
+<section class="hero" id="home">
+
     <div class="hero-content">
-        <h1>Jasa Remix Lagu <span>Professional</span></h1>
+
+        <h1 class="hero-title">
+
+    Creative Remix &
+
+    <span id="changingText">
+
+        Audio Production
+
+    </span>
+
+</h1>
         <p>
-            Remix lagu modern, cinematic, slow bass, breakbeat,
-            hingga sound TikTok viral dengan kualitas premium.
+            PW Music menghadirkan jasa remix modern,
+            cinematic soundtrack, mastering premium,
+            dan audio viral TikTok dengan kualitas studio.
         </p>
-        <a href="#products" class="hero-btn">Lihat Price List</a>
-    </div>
-</section>
-<!-- ========================= -->
-<!-- BANNER PROMO SLIDER -->
-<!-- LETAKKAN DI BAWAH HEADER -->
-<!-- ========================= -->
 
+        <div class="hero-btns">
 
+            <a href="#products"
+            class="hero-btn btn-primary">
+                Explore Services
+            </a>
 
-<h2 class="section-title">Kategori Remix</h2>
-<!-- KATEGORI -->
-<section class="categories" id="kategori"></section>
-<section class="categories">
-    
-    <div class="category">
-        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400&auto=format&fit=crop">
-        <h3>DJ Slow Bass</h3>
-    </div>
+            <a href="#contact"
+            class="hero-btn btn-secondary">
+                Contact Us
+            </a>
 
-    <div class="category">
-        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=400&auto=format&fit=crop">
-        <h3>Breakbeat</h3>
-    </div>
+        </div>
 
-    <div class="category">
-        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=400&auto=format&fit=crop">
-        <h3>Cinematic</h3>
-    </div>
-
-    <div class="category">
-        <img src="https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?q=80&w=400&auto=format&fit=crop">
-        <h3>TikTok Viral</h3>
-    </div>
-
-</section>
-<!-- ========================= -->
-<!-- TAMBAHAN FITUR PREMIUM -->
-<!-- LETAKKAN DI BAWAH HEADER -->
-<!-- ========================= -->
-
-<section class="top-info">
-
-    <div class="info-box">
-        🔥 Promo Hari Ini Diskon 20%
-    </div>
-
-    <div class="info-box">
-        👀 Sedang Dilihat 18 Orang
-    </div>
-
-    <div class="info-box">
-        ✅ 5.2K Order Selesai
-    </div>
-
-    <div class="info-box">
-        ⚡ Fast Response 24 Jam
     </div>
 
 </section>
 
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stat-box">
+        <h2>5.2K+</h2>
+        <p>Project Completed</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>24H</h2>
+        <p>Fast Response</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>98%</h2>
+        <p>Happy Clients</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>2026</h2>
+        <p>Modern Audio Style</p>
+    </div>
+
+</section>
 <!-- ========================= -->
+<!-- CLAIM PROMO HARI INI -->
+<!-- ========================= -->
+
+<div class="claim-promo">
+
+    <!-- ICON -->
+    <div class="claim-icon">
+        🔥
+    </div>
+
+    <!-- TEXT -->
+    <div class="claim-content">
+
+        <small>
+            PROMO KHUSUS HARI INI
+        </small>
+
+        <h3>
+            3 Lagu Hanya Rp190K
+        </h3>
+
+        <p>
+            Bonus mastering premium +
+            kualitas audio HQ khusus
+            <b>10 orang tercepat</b>.
+        </p>
+
+        <!-- SLOT -->
+        <div class="slot-box">
+
+            <span class="slot-live"></span>
+
+            Sisa slot:
+            <b>2 Orang Lagi</b>
+
+        </div>
+
+        <!-- BUTTON -->
+        <a href="#products"
+        class="claim-btn">
+
+            Claim Promo Sekarang
+
+        </a>
+
+    </div>
+
+</div>
+<!-- SERVICES -->
+
+<h2 class="section-title" id="services">
+Our Services
+</h2>
+
+<section class="services">
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            <i class="fa-solid fa-music"></i>
+        </div>
+
+        <h3>DJ Remix</h3>
+
+        <p>
+            Remix slow bass, breakbeat,
+            funky night, dan style modern viral.
+        </p>
+
+    </div>
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            <i class="fa-solid fa-wave-square"></i>
+        </div>
+
+        <h3>Mastering Audio</h3>
+
+        <p>
+            Sound lebih clean, tebal,
+            jernih, dan siap upload Spotify.
+        </p>
+
+    </div>
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            <i class="fa-solid fa-film"></i>
+        </div>
+
+        <h3>Cinematic Sound</h3>
+
+        <p>
+            Soundtrack cinematic untuk
+            konten TikTok, Reels, dan YouTube.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<!-- ========================= -->
+<!-- LIVE VISITOR COUNTER -->
+<!-- ========================= -->
+
+<div class="live-visitor">
+
+    <!-- DOT -->
+
+    <span class="live-dot"></span>
+
+    <!-- TEXT -->
+
+    <span id="visitorCount">
+
+        38
+
+    </span>
+
+    Orang Sedang Melihat Website Ini
+
+</div>
+<h2 class="section-title" id="products">
+Popular Services
+</h2>
+
+<section class="products">
+
+    <div class="card">
+
+       <img
+src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop"
+loading="lazy"
+alt="DJ Slow Bass">
+        <div class="card-content">
+
+            <h3>DJ Slow Bass</h3>
+
+            <div class="price">
+                Rp100K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Cinematic Remix</h3>
+
+            <div class="price">
+                Rp250K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Lagu Cover</h3>
+
+            <div class="price">
+                Rp250K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Backsound Film</h3>
+
+            <div class="price">
+                Rp250K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>DJ Opus</h3>
+
+            <div class="price">
+                Rp250K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Breakbeat Full Bass</h3>
+
+            <div class="price">
+                Rp150K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+     <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Jedag Jedug</h3>
+
+            <div class="price">
+                Rp150K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+ <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop
+">
+
+        <div class="card-content">
+
+            <h3>BKB</h3>
+
+            <div class="price">
+                Rp150K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>DJ Komang</h3>
+
+            <div class="price">
+                Rp150K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+ <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Maman Fvndy</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Koploisme</h3>
+
+            <div class="price">
+                Rp150K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>RawiBeat</h3>
+
+            <div class="price">
+                Rp150K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+ <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Disco Tanah</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+ <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>EDM</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Hard Tehcno</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+</section>
+
 <!-- TESTIMONI -->
-<!-- LETAKKAN DI ATAS FOOTER -->
-<!-- ========================= -->
 
-<h2 class="section-title">Testimoni Customer</h2>
-<!-- TESTIMONI -->
-<section class="testimonials" id="testimoni"></section>
+<h2 class="section-title">
+Client Reviews
+</h2>
+
 <section class="testimonials">
 
     <div class="testi-card">
+
         <img src="https://randomuser.me/api/portraits/men/32.jpg">
-        <h3>Budi Remix</h3>
-        <p>"Bass nya pecah banget kualitas mantap 🔥"</p>
+
+        <h3>Rama Audio</h3>
+
+        <p>
+            “Mastering nya clean banget,
+            bass nya mantap 🔥”
+        </p>
+
     </div>
 
     <div class="testi-card">
+
         <img src="https://randomuser.me/api/portraits/women/44.jpg">
-        <h3>Siska Audio</h3>
-        <p>"Proses cepat dan hasil remix cinematic keren."</p>
+
+        <h3>Siska Remix</h3>
+
+        <p>
+            “Visual website modern dan
+            hasil remix sangat premium.”
+        </p>
+
     </div>
 
     <div class="testi-card">
+
         <img src="https://randomuser.me/api/portraits/men/11.jpg">
-        <h3>Rama DJ</h3>
-        <p>"Sudah langganan remix TikTok viral disini."</p>
+
+        <h3>Dika Studio</h3>
+
+        <p>
+            “Fast response dan hasil audio
+            cocok untuk TikTok viral.”
+        </p>
+
     </div>
 
 </section>
 
-<a href="https://wa.me/62895368416228"
-class="wa-float"
-target="_blank">
+<!-- FOOTER -->
 
-    <i class="fa-brands fa-whatsapp"></i>
+<footer id="contact">
+
+    © 2026 PW Music — Creative Audio Studio
+
+</footer>
+
+<!-- WA FLOAT -->
+
+<a href="https://wa.me/62895368416228"
+class="wa-float">
+
+<i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
-<!-- ========================= -->
-<!-- NOTIFIKASI ORDER -->
-<!-- ========================= -->
+<!-- BOTTOM NAV -->
 
-<div class="notif" id="notif">
-    🔔 Andi baru saja order DJ Slow Bass
-</div>
+<nav class="bottom-nav">
 
-<section class="promo-slider">
+    <a href="#home" class="active">
+        <i class="fa-solid fa-house"></i>
+        Home
+    </a>
 
-    <div class="slides fade active">
-        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1400&auto=format&fit=crop">
+    <a href="#services">
+        <i class="fa-solid fa-layer-group"></i>
+        Services
+    </a>
 
-        <div class="slide-content">
-            <h1>DJ Slow Bass Premium</h1>
-            <p>Promo remix viral kualitas jernih & bass pecah 🔥</p>
-        </div>
-    </div>
+    <a href="#products">
+        <i class="fa-solid fa-music"></i>
+        Products
+    </a>
 
-    <div class="slides fade">
-        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1400&auto=format&fit=crop">
+    <a href="#contact">
+        <i class="fa-brands fa-whatsapp"></i>
+        Contact
+    </a>
 
-        <div class="slide-content">
-            <h1>Cinematic Soundtrack</h1>
-            <p>Soundtrack modern untuk TikTok & YouTube 🎬</p>
-        </div>
-    </div>
-
-    <div class="slides fade">
-        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1400&auto=format&fit=crop">
-
-        <div class="slide-content">
-            <h1>Breakbeat Full Bass</h1>
-            <p>Audio remix powerful & clean mastering ⚡</p>
-        </div>
-    </div>
-
-</section>
-
-<h2 class="section-title">Price List Jasa</h2>
-
-<section class="products" id="products">
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>DJ Slow Bass Remix</h3>
-            <div class="price">Rp100.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">1.2K Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-        </a>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Breakbeat Full Bass</h3>
-            <div class="price">Rp150.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">980 Pembelian</div>
-            <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-        </a>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Cinematic Soundtrack</h3>
-            <div class="price">Rp250.000</div>
-            <div class="rating">★★★★☆</div>
-            <div class="buy">700 Pembelian</div>
-            <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-        </a>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Remix TikTok Viral</h3>
-            <div class="price">Rp200.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">2.1K Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-            </a>
-        </div>
-    </div>
-
-   <div class="card">
-        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Remix Maman Fvndy</h3>
-            <div class="price">Rp120.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">2.1K Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-            </a>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Premium Full Package</h3>
-            <div class="price">Rp500.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">540 Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-             Order Sekarang
-            </a>
-        </div>
-    </div>
-
-   <div class="card">
-        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Disco Tanah</h3>
-            <div class="price">Rp200.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">2.1K Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-            </a>
-        </div>
-    </div>
-
-       <div class="card">
-        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Aransemen Lagu Original</h3>
-            <div class="price">Rp500.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">2.1K Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-            </a>
-        </div>
-    </div>
-
-       <div class="card">
-        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3>Remix Breakbeat</h3>
-            <div class="price">Rp250.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">2.1K Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-            </a>
-        </div>
-    </div>
-
-       <div class="card">
-        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=600&auto=format&fit=crop">
-        <div class="card-content">
-            <h3> Medley 8 Lagu</h3>
-            <div class="price">Rp350.000</div>
-            <div class="rating">★★★★★</div>
-            <div class="buy">2.1K Pembelian</div>
-           <a href="https://wa.me/62895368416228?text=Halo%20PW%20Music,%20saya%20ingin%20order%20jasa%20remix" class="btn-order" target="_blank">
-            Order Sekarang
-            </a>
-        </div>
-    </div>
-
-</section>
-<!-- CONTACT -->
-<footer id="contact"></footer>
-<footer>
-   
-    <!-- ========================= -->
-<!-- TOP UP SALDO -->
-<!-- ========================= -->
-
-<h2 class="section-title" id="topup">Top Up Saldo</h2>
-
-<section class="topup-section">
-
-    <div class="topup-box">
-
-        <h3>Top Up Saldo PW Music</h3>
-        <p>Rekening admin </p>
-        <p>4786 0102 0979 538 (BRI)</p>
-        <input type="text" id="namaUser" placeholder="Nama Anda">
-
-        <select id="nominal">
-            <option value="50000">Top Up Rp50.000</option>
-            <option value="100000">Top Up Rp100.000</option>
-            <option value="250000">Top Up Rp250.000</option>
-            <option value="500000">Top Up Rp500.000</option>
-        </select>
-
-        <select id="payment">
-            <option>DANA</option>
-            <option>OVO</option>
-            <option>GoPay</option>
-            <option>Bank Transfer</option>
-        </select>
-
-        <button onclick="buatNota()" class="btn-topup">
-            Top Up Sekarang
-        </button>
-
-    </div>
-<!-- ========================= -->
-<!-- POPUP NOTA -->
-<!-- ========================= -->
-
-<div class="nota-popup" id="notaPopup">
-
-    <div class="nota-box" id="notaArea">
-
-        <h2>PW Music</h2>
-
-        <p>Bukti Pembayaran / DP</p>
-
-        <hr>
-
-        <div class="nota-item">
-            <span>Nama</span>
-            <span id="notaNama"></span>
-        </div>
-
-        <div class="nota-item">
-            <span>Nominal</span>
-            <span id="notaNominal"></span>
-        </div>
-
-        <div class="nota-item">
-            <span>Metode</span>
-            <span id="notaMetode"></span>
-        </div>
-
-        <div class="nota-item">
-            <span>Status</span>
-            <span style="color:lime;">BERHASIL</span>
-        </div>
-
-        <div class="nota-item">
-            <span>Tanggal</span>
-            <span id="notaTanggal"></span>
-        </div>
-
-        <hr>
-
-        <button onclick="downloadNota()" class="btn-download">
-            Download Nota
-        </button>
-
-        <button onclick="window.print()" class="btn-print">
-            Cetak Nota
-        </button>
-
-        <button onclick="closeNota()" class="btn-close-nota">
-            Tutup
-        </button>
-
-    </div>
-</section>
-<label class="upload-label">
-    Upload Bukti Transfer
-</label>
-
-<input type="file" id="buktiTF" accept="image/*">
-</section>
-    © 2026 PW Music - Jasa Remix Lagu Professional
-</footer>
-
+</nav>
 <script>
-
     /* ========================= */
-/* AUTO SLIDER BANNER */
+/* SEARCH PRODUCT FUNCTION */
 /* ========================= */
 
-const slides = document.querySelectorAll(".slides");
+const searchInput =
+document.getElementById("searchInput");
 
-let currentSlide = 0;
+const productCards =
+document.querySelectorAll(".card");
 
-function showSlide(index){
+/* FUNCTION SEARCH */
 
-    slides.forEach(slide => {
+function searchProduct(){
 
-        slide.classList.remove("active");
-        slide.classList.remove("prev");
+    let keyword =
+    searchInput.value.toLowerCase().trim();
 
-    });
+    productCards.forEach(card => {
 
-    slides[currentSlide].classList.add("prev");
+        let title =
+        card.querySelector("h3")
+        .innerText
+        .toLowerCase();
 
-    currentSlide = index;
+        let parent =
+        card.parentElement;
 
-    slides[currentSlide].classList.add("active");
+        if(title.includes(keyword)){
 
-}
-
-setInterval(() => {
-
-    let nextSlide = currentSlide + 1;
-
-    if(nextSlide >= slides.length){
-        nextSlide = 0;
-    }
-
-    showSlide(nextSlide);
-
-}, 5000);
-
-    /* ========================= */
-/* NOTIFIKASI RANDOM */
-/* ========================= */
-
-const notif = document.getElementById("notif");
-
-const orders = [
-
-"🔥 Budi baru saja order Breakbeat Full Bass",
-"🎧 Andi baru saja order DJ Slow Bass",
-"⚡ Siska baru saja order Remix TikTok Viral",
-"🎵 Rama baru saja order Cinematic Soundtrack",
-"🚀 Dika baru saja order Premium Full Package"
-
-];
-
-let index = 0;
-
-setInterval(() => {
-
-    notif.innerHTML = orders[index];
-
-    index++;
-
-    if(index >= orders.length){
-        index = 0;
-    }
-
-}, 4000);
-
-function searchProduct() {
-
-    let input = document.getElementById("searchInput").value.toLowerCase();
-
-    let cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-
-        let title = card.querySelector("h3").innerText.toLowerCase();
-
-        if(title.includes(input)){
             card.style.display = "block";
-        } else {
+
+        }else{
+
             card.style.display = "none";
+
         }
 
     });
 
 }
-/* ========================= */
-/* MOBILE NAVIGATION */
-/* ========================= */
 
-const menuToggle = document.getElementById("menuToggle");
+/* SEARCH REALTIME */
 
-const navMenu = document.querySelector(".nav-menu");
+searchInput.addEventListener(
+"keyup",
+searchProduct
+);
 
-menuToggle.onclick = () => {
+/* ENTER KEYBOARD */
 
-    navMenu.classList.toggle("active");
+searchInput.addEventListener(
+"keypress",
+function(e){
 
-};
-/* ========================= */
-/* CLOSE MENU MOBILE */
-/* ========================= */
+    if(e.key === "Enter"){
 
-const navClose = document.getElementById("navClose");
-
-navClose.onclick = () => {
-
-    navMenu.classList.remove("active");
-
-};
-
-/* AUTO CLOSE SETELAH KLIK MENU */
-
-document.querySelectorAll(".nav-menu a")
-.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navMenu.classList.remove("active");
-
-    });
-
-});
-/* ========================= */
-/* TOP UP NOTA */
-/* ========================= */
-
-function buatNota(){
-
-    let nama = document.getElementById("namaUser").value;
-    let nominal = document.getElementById("nominal").value;
-    let metode = document.getElementById("payment").value;
-
-    if(nama === ""){
-
-        alert("Masukkan nama terlebih dahulu");
-        return;
+        searchProduct();
 
     }
 
-    document.getElementById("notaNama").innerText = nama;
+});
 
-    document.getElementById("notaNominal").innerText =
-    "Rp" + Number(nominal).toLocaleString("id-ID");
-
-    document.getElementById("notaMetode").innerText = metode;
-
-    document.getElementById("notaTanggal").innerText =
-    new Date().toLocaleString("id-ID");
-
-    document.getElementById("notaPopup").style.display = "flex";
-
-}
-
-/* CLOSE NOTA */
-
-function closeNota(){
-
-    document.getElementById("notaPopup").style.display = "none";
-
-}
-
-/* DOWNLOAD NOTA */
-
-function downloadNota(){
-
-    let nota = document.getElementById("notaArea").innerText;
-
-    let blob = new Blob([nota], {type:"text/plain"});
-
-    let link = document.createElement("a");
-
-    link.href = URL.createObjectURL(blob);
-
-    link.download = "Nota-PWMusic.txt";
-
-    link.click();
-
-}
 /* ========================= */
-/* SALDO USER */
+/* SALDO SYSTEM */
 /* ========================= */
 
-
+let saldo = 0;
 
 /* LOAD STORAGE */
 
@@ -1892,16 +3553,18 @@ function updateSaldo(){
 }
 
 /* ========================= */
-/* TOP UP */
+/* TOPUP FUNCTION */
 /* ========================= */
 
-{
+function topupSaldo(){
 
     let nama =
     document.getElementById("namaUser").value;
 
     let nominal =
-    parseInt(document.getElementById("nominal").value);
+    parseInt(
+    document.getElementById("nominal").value
+    );
 
     let metode =
     document.getElementById("payment").value;
@@ -1920,7 +3583,7 @@ function updateSaldo(){
 
     if(!bukti){
 
-        alert("Upload bukti transfer terlebih dahulu");
+        alert("Upload bukti transfer");
         return;
 
     }
@@ -1929,7 +3592,10 @@ function updateSaldo(){
 
     saldo += nominal;
 
-    localStorage.setItem("saldoPW", saldo);
+    localStorage.setItem(
+    "saldoPW",
+    saldo
+    );
 
     updateSaldo();
 
@@ -1957,140 +3623,1032 @@ function updateSaldo(){
     let pesan =
 `Halo PW Music
 
-Saya sudah melakukan deposit saldo.
+Saya sudah melakukan top up saldo.
 
 Nama: ${nama}
 Nominal: Rp${nominal.toLocaleString("id-ID")}
-Metode: ${metode}
-
-Bukti transfer sudah saya upload.`;
+Metode: ${metode}`;
 
     window.open(
+
 `https://wa.me/62895368416228?text=${encodeURIComponent(pesan)}`,
+
 "_blank"
+
     );
 
 }
-/* ========================= */
-/* AUTO TAMBAH SALDO */
-/* SETELAH UPLOAD BUKTI TF */
-/* ========================= */
 
-let saldo = 0;
+/* CLOSE NOTA */
 
-/* AMBIL SALDO DARI STORAGE */
-
-if(localStorage.getItem("saldoPW")){
-
-    saldo =
-    parseInt(localStorage.getItem("saldoPW"));
-
-    updateSaldo();
-
-}
-
-/* UPDATE TAMPILAN SALDO */
-
-function updateSaldo(){
-
-    document.getElementById("saldoUser")
-    .innerText =
-    "Rp" + saldo.toLocaleString("id-ID");
-
-}
-
-/* ========================= */
-/* AUTO TOP UP */
-/* ========================= */
-
-{
-
-    let nama =
-    document.getElementById("namaUser").value;
-
-    let nominal =
-    parseInt(
-        document.getElementById("nominal").value
-    );
-
-    let metode =
-    document.getElementById("payment").value;
-
-    let bukti =
-    document.getElementById("buktiTF").files[0];
-
-    /* VALIDASI */
-
-    if(nama === ""){
-
-        alert("Masukkan nama terlebih dahulu");
-        return;
-
-    }
-
-    if(!bukti){
-
-        alert("Upload bukti transfer terlebih dahulu");
-        return;
-
-    }
-
-    /* ========================= */
-    /* AUTO TAMBAH SALDO */
-    /* ========================= */
-
-    saldo += nominal;
-
-    localStorage.setItem("saldoPW", saldo);
-
-    updateSaldo();
-
-    /* ========================= */
-    /* TAMPILKAN NOTA */
-    /* ========================= */
-
-    document.getElementById("notaNama")
-    .innerText = nama;
-
-    document.getElementById("notaNominal")
-    .innerText =
-    "Rp" + nominal.toLocaleString("id-ID");
-
-    document.getElementById("notaMetode")
-    .innerText = metode;
-
-    document.getElementById("notaTanggal")
-    .innerText =
-    new Date().toLocaleString("id-ID");
+function closeNota(){
 
     document.getElementById("notaPopup")
+    .style.display = "none";
+
+}
+/* ========================= */
+/* POPUP PROMO AUTO SHOW */
+/* ========================= */
+
+window.addEventListener(
+"load",
+function(){
+
+    setTimeout(() => {
+
+        document
+        .getElementById("promoPopup")
+        .classList.add("show");
+
+    }, 1500);
+
+});
+
+/* CLOSE POPUP */
+
+function closePromo(){
+
+    document
+    .getElementById("promoPopup")
+    .classList.remove("show");
+
+}
+/* ========================= */
+/* CART SYSTEM */
+/* ========================= */
+
+let cart = [];
+
+/* ADD TO CART */
+
+function addToCart(name, price){
+
+    cart.push({
+
+        name:name,
+        price:price
+
+    });
+
+    updateCart();
+
+}
+
+/* UPDATE CART */
+
+function updateCart(){
+
+    let cartItems =
+    document.getElementById("cartItems");
+
+    let cartCount =
+    document.getElementById("cartCount");
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+        total += item.price;
+
+        cartItems.innerHTML += `
+
+        <div class="cart-item">
+
+            <h4>${item.name}</h4>
+
+            <p>
+                Rp${item.price.toLocaleString("id-ID")}
+            </p>
+
+        </div>
+
+        `;
+
+    });
+
+    cartCount.innerText = cart.length;
+
+    updateTotal();
+
+}
+
+/* UPDATE TOTAL */
+
+function updateTotal(){
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+        total += item.price;
+
+    });
+
+    let paket =
+    parseInt(
+    document.getElementById("paketSelect").value
+    );
+
+    total += paket;
+
+    document.getElementById("totalPrice")
+    .innerText =
+    "Rp" + total.toLocaleString("id-ID");
+
+}
+
+/* OPEN CART */
+
+function openCart(){
+
+    document.getElementById("checkoutPopup")
     .style.display = "flex";
 
-    /* ========================= */
-    /* AUTO KONFIRMASI WA */
-    /* ========================= */
+}
+
+/* CLOSE CART */
+
+function closeCart(){
+
+    document.getElementById("checkoutPopup")
+    .style.display = "none";
+
+}
+
+/* CHECKOUT WHATSAPP */
+
+function checkoutWA(){
+
+    if(cart.length < 1){
+
+        alert("Keranjang masih kosong");
+
+        return;
+
+    }
+
+    let paketText =
+    document.getElementById("paketSelect")
+    .options[
+    document.getElementById("paketSelect")
+    .selectedIndex
+    ].text;
 
     let pesan =
 `Halo PW Music
 
-Saya sudah melakukan deposit saldo.
+Saya ingin checkout remix:
 
-Nama: ${nama}
-Nominal: Rp${nominal.toLocaleString("id-ID")}
-Metode: ${metode}
+${cart.map(item =>
+`• ${item.name} - Rp${item.price.toLocaleString("id-ID")}`
+).join("\n")}
 
-Bukti transfer sudah saya upload.`;
+Paket:
+${paketText}
+
+Total:
+${document.getElementById("totalPrice").innerText}`;
 
     window.open(
 
 `https://wa.me/62895368416228?text=${encodeURIComponent(pesan)}`,
-
 "_blank"
 
     );
 
 }
-</script>
+/* ========================= */
+/* ADD TO CART */
+/* ========================= */
 
+function addToCart(name, price){
+
+    let existingItem =
+    cart.find(item => item.name === name);
+
+    /* JIKA SUDAH ADA */
+
+    if(existingItem){
+
+        existingItem.qty += 1;
+
+    }else{
+
+        cart.push({
+
+            name:name,
+            price:price,
+            qty:1
+
+        });
+
+    }
+
+    updateCart();
+
+}
+
+/* ========================= */
+/* UPDATE CART */
+/* ========================= */
+
+function updateCart(){
+
+    let cartItems =
+    document.getElementById("cartItems");
+
+    let cartCount =
+    document.getElementById("cartCount");
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach((item,index) => {
+
+        total += item.price * item.qty;
+
+        cartItems.innerHTML += `
+
+        <div class="cart-item">
+
+            <!-- INFO -->
+
+            <div class="cart-info">
+
+                <h4>${item.name}</h4>
+
+                <p>
+                    Rp${item.price.toLocaleString("id-ID")}
+                </p>
+
+            </div>
+
+            <!-- QTY -->
+
+            <div class="qty-box">
+
+                <button onclick="minusQty(${index})">
+
+                    -
+
+                </button>
+
+                <span>
+                    ${item.qty}
+                </span>
+
+                <button onclick="plusQty(${index})">
+
+                    +
+
+                </button>
+
+            </div>
+
+            <!-- REMOVE -->
+
+            <button
+            class="btn-remove"
+            onclick="removeItem(${index})">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+    cartCount.innerText = cart.length;
+
+    updateTotal();
+
+}
+
+/* ========================= */
+/* PLUS QTY */
+/* ========================= */
+
+function plusQty(index){
+
+    cart[index].qty += 1;
+
+    updateCart();
+
+}
+
+/* ========================= */
+/* MINUS QTY */
+/* ========================= */
+
+function minusQty(index){
+
+    if(cart[index].qty > 1){
+
+        cart[index].qty -= 1;
+
+    }else{
+
+        cart.splice(index,1);
+
+    }
+
+    updateCart();
+
+}
+
+/* ========================= */
+/* REMOVE ITEM */
+/* ========================= */
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+/* ========================= */
+/* RESET SEARCH */
+/* ========================= */
+
+function resetSearch(){
+
+    /* KOSONGKAN INPUT */
+
+    searchInput.value = "";
+
+    /* TAMPILKAN SEMUA CARD */
+
+    productCards.forEach(card => {
+
+        card.style.display = "block";
+
+    });
+
+}
+
+/* ========================= */
+/* TEXT BERGANTIAN */
+/* ========================= */
+
+const texts = [
+
+    "Audio Production",
+    "DJ Slow Bass",
+    "Cinematic Remix",
+    "TikTok Viral Audio",
+    "Mastering Premium",
+    "Breakbeat Modern",
+    "Soundtrack Creator",
+    "DJ Remix Studio"
+
+];
+
+let index = 0;
+
+const changingText =
+document.getElementById("changingText");
+
+function changeText(){
+
+    /* FADE OUT */
+
+    changingText.classList.remove("fade-in");
+
+    changingText.classList.add("fade-out");
+
+    setTimeout(() => {
+
+        index++;
+
+        if(index >= texts.length){
+
+            index = 0;
+
+        }
+
+        changingText.innerText =
+        texts[index];
+
+        /* FADE IN */
+
+        changingText.classList.remove("fade-out");
+
+        changingText.classList.add("fade-in");
+
+    }, 500);
+
+}
+
+/* START */
+
+setInterval(changeText,3000);
+
+/* ========================= */
+/* LIVE VISITOR RANDOM */
+/* ========================= */
+
+const visitorText =
+document.getElementById(
+"visitorCount"
+);
+
+let visitor =
+Math.floor(Math.random() * 20) + 30;
+
+/* UPDATE */
+
+setInterval(() => {
+
+    let randomChange =
+    Math.floor(Math.random() * 5);
+
+    /* RANDOM NAIK / TURUN */
+
+    if(Math.random() > 0.5){
+
+        visitor += randomChange;
+
+    }else{
+
+        visitor -= randomChange;
+
+    }
+
+    /* LIMIT */
+
+    if(visitor < 18){
+
+        visitor = 18;
+
+    }
+
+    if(visitor > 99){
+
+        visitor = 99;
+
+    }
+
+    /* UPDATE TEXT */
+
+    visitorText.innerText =
+    visitor;
+
+},3000);
+
+/* ========================= */
+/* TUNGGU HTML SELESAI */
+/* ========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ========================= */
+    /* DATA */
+    /* ========================= */
+
+    const fakeOrders = [
+
+        {
+
+            name:"Wayan",
+            product:"DJ Slow Bass",
+            image:"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=300&auto=format&fit=crop"
+
+        },
+
+        {
+
+            name:"Komang",
+            product:"Cinematic Remix",
+            image:"https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=300&auto=format&fit=crop"
+
+        },
+
+        {
+
+            name:"Made",
+            product:"Breakbeat Remix",
+            image:"https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=300&auto=format&fit=crop"
+
+        }
+
+    ];
+
+    /* ========================= */
+    /* ELEMENT */
+    /* ========================= */
+
+    const fakeOrder =
+    document.getElementById("fakeOrder");
+
+    const fakeOrderName =
+    document.getElementById("fakeOrderName");
+
+    const fakeOrderProduct =
+    document.getElementById("fakeOrderProduct");
+
+    const fakeOrderImage =
+    document.getElementById("fakeOrderImage");
+
+    /* ========================= */
+    /* CEK */
+    /* ========================= */
+
+    if(
+        !fakeOrder ||
+        !fakeOrderName ||
+        !fakeOrderProduct ||
+        !fakeOrderImage
+    ){
+
+        console.log("Fake order element tidak ditemukan");
+
+        return;
+
+    }
+
+    /* ========================= */
+    /* SHOW NOTIF */
+    /* ========================= */
+
+    function showFakeOrder(){
+
+        const random =
+        fakeOrders[
+        Math.floor(
+        Math.random() * fakeOrders.length
+        )
+        ];
+
+        /* UPDATE */
+
+        fakeOrderName.innerText =
+        random.name;
+
+        fakeOrderProduct.innerText =
+        random.product;
+
+        fakeOrderImage.src =
+        random.image;
+
+        /* SHOW */
+
+        fakeOrder.classList.add("show");
+
+        /* HIDE */
+
+        setTimeout(() => {
+
+            fakeOrder.classList.remove("show");
+
+        },4000);
+
+    }
+
+    /* FIRST */
+
+    setTimeout(() => {
+
+        showFakeOrder();
+
+    },3000);
+
+    /* LOOP */
+
+    setInterval(() => {
+
+        showFakeOrder();
+
+    },8000);
+
+});
+
+
+</script>
+<!-- ========================= -->
+<!-- POPUP PROMO -->
+<!-- LETAKKAN DI BAWAH <body> -->
+<!-- ========================= -->
+
+<div class="promo-popup" id="promoPopup">
+
+    <div class="promo-box">
+
+        <button
+        class="close-promo"
+        onclick="closePromo()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div class="promo-icon">
+            🔥
+        </div>
+
+        <h2>
+            Promo Spesial PW Music
+        </h2>
+
+        <p>
+
+            Diskon 20% untuk semua jasa remix
+            hari ini.
+
+            <br><br>
+
+            Bonus mastering premium
+            untuk 10 customer pertama.
+
+        </p>
+
+        <a
+        href="#products"
+        class="promo-btn"
+        onclick="closePromo()">
+
+            Ambil Promo
+
+        </a>
+
+    </div>
+
+</div>
+<!-- ========================= -->
+<!-- PRICING PACKAGES -->
+<!-- ========================= -->
+
+<section class="pricing-section">
+
+    <h2 class="section-title">
+        Paket Remix PW Music
+    </h2>
+
+    <div class="pricing-grid">
+
+        <!-- BASIC -->
+
+        <div class="pricing-card">
+
+            <div class="pricing-badge">
+                BASIC
+            </div>
+
+            <h3>
+                Standard Remix
+            </h3>
+
+            <div class="pricing-price">
+
+                Rp100K
+
+            </div>
+
+            <ul>
+
+                <li>✔ 1 Lagu Remix</li>
+
+                <li>✔ Audio HD</li>
+
+                <li>✔ Free Revisi 1x</li>
+
+                <li>✔ Render Cepat</li>
+
+                <li>✔ Format MP3</li>
+
+            </ul>
+
+            <a href="#"
+            class="pricing-btn">
+
+                Order Sekarang
+
+            </a>
+
+        </div>
+
+        <!-- PREMIUM -->
+
+        <div class="pricing-card premium-card">
+
+            <div class="popular-tag">
+
+                🔥 PALING LARIS
+
+            </div>
+
+            <div class="pricing-badge premium-badge">
+                PREMIUM
+            </div>
+
+            <h3>
+                Cinematic Premium
+            </h3>
+
+            <div class="pricing-price">
+
+                Rp190K
+
+            </div>
+
+            <ul>
+
+                <li>✔ 3 Lagu Remix</li>
+
+                <li>✔ Mastering Premium</li>
+
+                <li>✔ Audio Ultra HQ</li>
+
+                <li>✔ Free Revisi Unlimited</li>
+
+                <li>✔ Prioritas Pengerjaan</li>
+
+                <li>✔ Format MP3 + WAV</li>
+
+            </ul>
+
+            <a href="#"
+            class="pricing-btn premium-btn">
+
+                Claim Promo
+
+            </a>
+
+        </div>
+
+        <!-- VIP -->
+
+        <div class="pricing-card">
+
+            <div class="pricing-badge vip-badge">
+                VIP
+            </div>
+
+            <h3>
+                Ultra Remix Studio
+            </h3>
+
+            <div class="pricing-price">
+
+                Rp350K
+
+            </div>
+
+            <ul>
+
+                <li>✔ 5 Lagu Remix</li>
+
+                <li>✔ Mixing & Mastering Pro</li>
+
+                <li>✔ Sound Design Premium</li>
+
+                <li>✔ Fast Render VIP</li>
+
+                <li>✔ Full HQ WAV</li>
+
+                <li>✔ Prioritas Utama</li>
+
+            </ul>
+
+            <a href="#"
+            class="pricing-btn">
+
+                Order VIP
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================= -->
+<!-- FAKE ORDER NOTIFICATION -->
+<!-- ========================= -->
+
+<div class="fake-order" id="fakeOrder">
+
+    <!-- IMAGE -->
+
+    <img
+    id="fakeOrderImage"
+    src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=300&auto=format&fit=crop">
+
+    <!-- CONTENT -->
+
+    <div class="fake-order-content">
+
+        <h4 id="fakeOrderName">
+
+            Wayan
+
+        </h4>
+
+        <p>
+
+            baru saja order
+
+            <span id="fakeOrderProduct">
+
+                DJ Slow Bass
+
+            </span>
+
+        </p>
+
+    </div>
+
+</div>
+<!-- ========================= -->
+<!-- TOP UP SALDO SECTION -->
+<!-- LETAKKAN DI ATAS FOOTER -->
+<!-- ========================= -->
+
+<section class="topup-section" id="topup">
+
+    <h2 class="section-title">
+        Top Up Saldo
+    </h2>
+
+    <div class="topup-box">
+
+        <div class="topup-header">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Deposit Saldo PW Music</h3>
+        </div>
+<p style="margin-bottom:15px;color:#cfcfcf;line-height:1.8;">
+
+    Transfer ke rekening berikut:
+
+    <br><br>
+
+    <b>Bank BRI</b><br>
+    4786 0102 0979 538<br>
+    a/n PW Music
+
+    <br><br>
+<!-- REKENING BOX -->
+
+<div class="rekening-box">
+
+    <div class="rekening-header">
+
+        <i class="fa-solid fa-building-columns"></i>
+
+        <div>
+            <h3>Bank BRI</h3>
+            <p>a/n PW Music</p>
+        </div>
+
+    </div>
+
+    <!-- NOMOR REKENING -->
+
+    <div class="rekening-number"
+    id="rekeningNumber">
+
+        478601020979538
+
+    </div>
+
+    <!-- BUTTON -->
+
+    <button
+    class="btn-copy"
+    onclick="copyRekening()">
+
+        <i class="fa-regular fa-copy"></i>
+
+        Copy Rekening
+
+    </button>
+
+</div>
+    Setelah transfer silakan upload bukti pembayaran.
+
+</p>
+        <input
+        type="text"
+        id="namaUser"
+        placeholder="Masukkan Nama">
+
+        <select id="nominal">
+
+            <option value="50000">
+                Top Up Rp50.000
+            </option>
+
+            <option value="100000">
+                Top Up Rp100.000
+            </option>
+
+            <option value="250000">
+                Top Up Rp250.000
+            </option>
+
+            <option value="500000">
+                Top Up Rp500.000
+            </option>
+
+        </select>
+
+        <select id="payment">
+
+            <option>DANA</option>
+            <option>OVO</option>
+            <option>GoPay</option>
+            <option>Bank Transfer</option>
+
+        </select>
+
+        <label class="upload-label">
+            Upload Bukti Transfer
+        </label>
+
+        <input
+        type="file"
+        id="buktiTF"
+        accept="image/*">
+
+        <button
+        class="btn-topup"
+        onclick="topupSaldo()">
+
+            Top Up Sekarang
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- POPUP NOTA -->
+<!-- ========================= -->
+
+<div class="nota-popup" id="notaPopup">
+
+    <div class="nota-box">
+
+        <h2>PW Music</h2>
+
+        <p>Bukti Top Up Saldo</p>
+
+        <hr>
+
+        <div class="nota-item">
+            <span>Nama</span>
+            <span id="notaNama"></span>
+        </div>
+
+        <div class="nota-item">
+            <span>Nominal</span>
+            <span id="notaNominal"></span>
+        </div>
+
+        <div class="nota-item">
+            <span>Metode</span>
+            <span id="notaMetode"></span>
+        </div>
+
+        <div class="nota-item">
+            <span>Status</span>
+            <span style="color:lime;">
+                BERHASIL
+            </span>
+        </div>
+
+        <div class="nota-item">
+            <span>Tanggal</span>
+            <span id="notaTanggal"></span>
+        </div>
+
+        <button
+        class="btn-close-nota"
+        onclick="closeNota()">
+
+            Tutup
+
+        </button>
+
+    </div>
+
+</div>
+<div class="cart-float" onclick="openCart()">
+
+    <i class="fa-solid fa-cart-shopping"></i>
+
+    <span id="cartCount">
+        0
+    </span>
+
+</div>
 </body>
 </html>
