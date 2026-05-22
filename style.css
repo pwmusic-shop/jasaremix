@@ -3665,3 +3665,213 @@ footer{
     }
 
 }
+/* ========================= */
+/* FAVORITE FLOAT */
+/* ========================= */
+
+.favorite-float{
+
+    position:fixed;
+
+    bottom:120px;
+    left:20px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+    135deg,
+    #ff2d55,
+    #ff0066
+    );
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    box-shadow:
+    0 0 20px rgba(255,0,80,0.5);
+
+    animation:
+    pulseFavorite 2s infinite;
+
+}
+
+/* BADGE */
+
+.favorite-float span{
+
+    position:absolute;
+
+    top:-5px;
+    right:-5px;
+
+    background:linear-gradient(
+    135deg,
+    #4facfe,
+    #00c6ff,
+    #38bdf8
+    );
+
+    color:#fff;
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+    font-weight:bold;
+
+    box-shadow:
+    0 0 10px rgba(0,198,255,0.7);
+
+    border:1px solid rgba(255,255,255,0.3);
+
+}
+
+/* ANIMATION */
+
+@keyframes pulseFavorite{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+/* ========================= */
+/* FAVORITE BUTTON */
+/* ========================= */
+
+.favorite-btn{
+
+    position:absolute;
+
+    top:12px;
+    right:12px;
+
+    width:42px;
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,15,40,0.75);
+
+    backdrop-filter:blur(12px);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+
+    border:1px solid rgba(0,198,255,0.25);
+
+    box-shadow:
+    0 0 10px rgba(0,198,255,0.15);
+
+    z-index:20;
+
+}
+
+/* ICON LOVE */
+
+.favorite-btn i{
+
+    font-size:18px;
+
+    color:#38bdf8;
+
+    transition:0.3s;
+
+    text-shadow:
+    0 0 10px rgba(56,189,248,0.7);
+
+}
+
+/* HOVER */
+
+.favorite-btn:hover{
+
+    transform:scale(1.12);
+
+    background:linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+    );
+
+    box-shadow:
+    0 0 18px rgba(0,198,255,0.6);
+
+}
+
+/* HOVER ICON */
+
+.favorite-btn:hover i{
+
+    color:#ffffff;
+
+    transform:scale(1.1);
+
+}
+
+/* ACTIVE */
+
+.favorite-btn.active{
+
+    background:linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+    );
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+    0 0 25px rgba(0,198,255,0.7);
+
+}
+
+/* ACTIVE ICON */
+
+.favorite-btn.active i{
+
+    color:#ffffff;
+
+    text-shadow:
+    0 0 15px rgba(255,255,255,0.9);
+
+}
