@@ -87,2560 +87,8 @@ content="#00d4ff">
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<style>
-/* IMAGE SMOOTH */
-
-img{
-    image-rendering:auto;
-    backface-visibility:hidden;
-}
-
-/* SCROLL SMOOTH */
-
-html{
-    scroll-behavior:smooth;
-}
-
-/* PERFORMANCE */
-
-*{
-    -webkit-tap-highlight-color:transparent;
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#070b14;
-    color:white;
-    overflow-x:hidden;
-}
-
-/* ========================= */
-/* HEADER */
-/* ========================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
-    background:rgba(10,15,25,0.88);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,0.06);
-}
-
-.navbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    padding:15px 5%;
-}
-
-/* LOGO */
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#00d4ff;
-    white-space:nowrap;
-}
-
-.logo span{
-    color:white;
-}
-
-/* SEARCH */
-
-.search-box{
-    flex:1;
-    max-width:500px;
-    position:relative;
-}
-
-.search-box input{
-    width:100%;
-    height:48px;
-    border:none;
-    outline:none;
-    border-radius:40px;
-    background:#121b2b;
-    color:white;
-    padding:0 55px 0 18px;
-    font-size:14px;
-}
-
-.search-box button{
-    position:absolute;
-    right:6px;
-    top:6px;
-    width:36px;
-    height:36px;
-    border:none;
-    border-radius:50%;
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-    color:white;
-    cursor:pointer;
-}
-
-/* SALDO */
-
-.saldo-box{
-    min-width:130px;
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-    padding:10px 16px;
-    border-radius:16px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    box-shadow:0 5px 20px rgba(0,212,255,0.3);
-}
-
-.saldo-box i{
-    font-size:20px;
-}
-
-.saldo-box small{
-    font-size:11px;
-    opacity:0.8;
-}
-
-.saldo-box h4{
-    font-size:15px;
-}
-
-/* ========================= */
-/* HERO */
-/* ========================= */
-
-.hero{
-    min-height:100vh;
-    padding:120px 5% 100px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1400&auto=format&fit=crop') center/cover;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero-content h1{
-    font-size:65px;
-    line-height:1.2;
-    margin-bottom:20px;
-}
-
-.hero-content h1 span{
-    color:#00d4ff;
-}
-
-.hero-content p{
-    color:#c9d1d9;
-    font-size:18px;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
-.hero-btns{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.hero-btn{
-    padding:15px 32px;
-    border-radius:40px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-}
-
-.btn-secondary{
-    border:1px solid rgba(255,255,255,0.2);
-    background:rgba(255,255,255,0.05);
-}
-
-.hero-btn:hover{
-    transform:translateY(-4px);
-}
-
-/* ========================= */
-/* STATS */
-/* ========================= */
-
-.stats{
-    padding:40px 5%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.stat-box{
-    background:#101827;
-    padding:25px;
-    border-radius:22px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.05);
-}
-
-.stat-box h2{
-    font-size:38px;
-    color:#00d4ff;
-    margin-bottom:8px;
-}
-
-/* ========================= */
-/* SECTION */
-/* ========================= */
-
-.section-title{
-    text-align:center;
-    font-size:42px;
-    margin:70px 0 40px;
-}
-
-/* ========================= */
-/* SERVICES */
-/* ========================= */
-
-.services{
-    padding:0 5% 60px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.service-card{
-    background:#101827;
-    border-radius:24px;
-    padding:30px;
-    transition:0.3s;
-    border:1px solid rgba(255,255,255,0.06);
-}
-
-.service-card:hover{
-    transform:translateY(-8px);
-    border-color:#00d4ff;
-}
-
-.service-icon{
-    width:70px;
-    height:70px;
-    border-radius:18px;
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.service-card h3{
-    margin-bottom:15px;
-    font-size:24px;
-}
-
-.service-card p{
-    color:#c2c2c2;
-    line-height:1.8;
-}
-
-/* ========================= */
-/* PRODUCTS */
-/* ========================= */
-
-.products{
-    padding:0 5% 80px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#101827;
-    border-radius:24px;
-    overflow:hidden;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:22px;
-}
-
-.card-content h3{
-    margin-bottom:10px;
-}
-
-.price{
-    font-size:28px;
-    color:#00d4ff;
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.rating{
-    color:gold;
-    margin-bottom:12px;
-}
-
-.btn-order{
-    width:100%;
-    display:block;
-    text-align:center;
-    padding:14px;
-    border-radius:14px;
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-}
-
-/* ========================= */
-/* TESTIMONI */
-/* ========================= */
-
-.testimonials{
-    padding:0 5% 80px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-}
-
-.testi-card{
-    background:#101827;
-    padding:25px;
-    border-radius:22px;
-}
-
-.testi-card img{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
-}
-
-.testi-card p{
-    color:#cfcfcf;
-    line-height:1.7;
-}
-
-/* ========================= */
-/* FOOTER */
-/* ========================= */
-
-footer{
-    padding:40px 5% 120px;
-    text-align:center;
-    color:#999;
-    border-top:1px solid rgba(255,255,255,0.06);
-}
-
-/* ========================= */
-/* WHATSAPP */
-/* ========================= */
-
-.wa-float{
-    position:fixed;
-    right:20px;
-    bottom:95px;
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:34px;
-    text-decoration:none;
-    z-index:999;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* ========================= */
-/* BOTTOM NAV */
-/* ========================= */
-
-.bottom-nav{
-    position:fixed;
-    bottom:15px;
-    left:50%;
-    transform:translateX(-50%);
-    width:95%;
-    max-width:500px;
-    background:rgba(15,20,30,0.95);
-    backdrop-filter:blur(15px);
-    border-radius:24px;
-    padding:12px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    z-index:9999;
-    border:1px solid rgba(255,255,255,0.05);
-}
-
-.bottom-nav a{
-    text-decoration:none;
-    color:#d6d6d6;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:5px;
-    padding:12px 5px;
-    border-radius:16px;
-    font-size:11px;
-    transition:0.3s;
-}
-
-.bottom-nav a i{
-    font-size:18px;
-}
-
-.bottom-nav a:hover,
-.bottom-nav a.active{
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-    color:white;
-    transform:translateY(-3px);
-}
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
-@media(max-width:768px){
-
-    .navbar{
-        gap:10px;
-    }
-
-    .logo{
-        font-size:22px;
-    }
-
-    .saldo-box{
-        min-width:auto;
-        padding:10px 12px;
-    }
-
-    .saldo-box h4{
-        font-size:13px;
-    }
-
-    .hero-content h1{
-        font-size:42px;
-    }
-
-    .hero-content p{
-        font-size:15px;
-    }
-
-    .section-title{
-        font-size:32px;
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .card img{
-        height:130px;
-    }
-
-    .card-content{
-        padding:14px;
-    }
-
-    .card-content h3{
-        font-size:14px;
-    }
-
-    .price{
-        font-size:20px;
-    }
-
-}
-
-/* ========================= */
-/* TOPUP STYLE */
-/* ========================= */
-
-.topup-section{
-    padding:30px 5% 80px;
-}
-
-.topup-box{
-    max-width:500px;
-    margin:auto;
-    background:#101827;
-    padding:30px;
-    border-radius:28px;
-    border:1px solid rgba(255,255,255,0.06);
-}
-
-.topup-header{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:25px;
-}
-
-.topup-header i{
-    width:55px;
-    height:55px;
-    border-radius:16px;
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:24px;
-}
-
-.topup-box input,
-.topup-box select{
-    width:100%;
-    height:52px;
-    border:none;
-    outline:none;
-    border-radius:16px;
-    background:#182235;
-    color:white;
-    padding:0 16px;
-    margin-bottom:15px;
-}
-
-.upload-label{
-    display:block;
-    margin-bottom:10px;
-    color:#cfcfcf;
-}
-
-.btn-topup{
-    width:100%;
-    height:54px;
-    border:none;
-    border-radius:18px;
-    background:linear-gradient(45deg,#00d4ff,#0077ff);
-    color:white;
-    font-size:15px;
-    font-weight:600;
-    cursor:pointer;
-}
-
-/* ========================= */
-/* NOTA POPUP */
-/* ========================= */
-
-.nota-popup{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.7);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:99999;
-}
-
-.nota-box{
-    width:90%;
-    max-width:420px;
-    background:white;
-    color:black;
-    padding:30px;
-    border-radius:24px;
-}
-
-.nota-box h2{
-    text-align:center;
-    margin-bottom:10px;
-}
-
-.nota-item{
-    display:flex;
-    justify-content:space-between;
-    margin:15px 0;
-}
-
-.btn-close-nota{
-    width:100%;
-    height:48px;
-    border:none;
-    border-radius:14px;
-    background:#111827;
-    color:white;
-    cursor:pointer;
-    margin-top:20px;
-}
-/* ========================= */
-/* POPUP PROMO */
-/* ========================= */
-
-.promo-popup{
-
-    position:fixed;
-    inset:0;
-
-    background:
-    rgba(0,0,0,0.75);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    z-index:999999;
-
-    opacity:0;
-    visibility:hidden;
-
-    transition:0.4s;
-
-}
-
-/* ACTIVE */
-
-.promo-popup.show{
-
-    opacity:1;
-    visibility:visible;
-
-}
-
-/* BOX */
-
-.promo-box{
-
-    width:90%;
-    max-width:420px;
-
-    background:
-    linear-gradient(
-    145deg,
-    #101827,
-    #0b1220
-    );
-
-    border:
-    1px solid rgba(255,255,255,0.08);
-
-    border-radius:30px;
-
-    padding:35px 28px;
-
-    text-align:center;
-
-    position:relative;
-
-    animation:popupAnim 0.4s ease;
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,0.45);
-
-}
-
-/* ICON */
-
-.promo-icon{
-
-    font-size:60px;
-
-    margin-bottom:18px;
-
-    animation:pulsePromo 2s infinite;
-
-}
-
-/* TITLE */
-
-.promo-box h2{
-
-    font-size:30px;
-
-    margin-bottom:15px;
-
-    color:#00d4ff;
-
-}
-
-/* TEXT */
-
-.promo-box p{
-
-    color:#d7d7d7;
-
-    line-height:1.8;
-
-    margin-bottom:25px;
-
-}
-
-/* BUTTON */
-
-.promo-btn{
-
-    display:inline-block;
-
-    padding:15px 30px;
-
-    border-radius:40px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:0.3s;
-
-}
-
-.promo-btn:hover{
-
-    transform:translateY(-4px);
-
-}
-
-/* CLOSE */
-
-.close-promo{
-
-    position:absolute;
-
-    top:15px;
-    right:15px;
-
-    width:40px;
-    height:40px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:
-    rgba(255,255,255,0.08);
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:18px;
-
-}
-
-/* ANIMATION */
-
-@keyframes popupAnim{
-
-    from{
-
-        transform:
-        scale(0.7);
-
-        opacity:0;
-
-    }
-
-    to{
-
-        transform:
-        scale(1);
-
-        opacity:1;
-
-    }
-
-}
-
-@keyframes pulsePromo{
-
-    0%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.1);
-    }
-
-    100%{
-        transform:scale(1);
-    }
-
-}
-/* ========================= */
-/* CART FLOAT */
-/* ========================= */
-
-.cart-float{
-
-    position:fixed;
-
-    right:20px;
-
-    /* NAIKKAN */
-    bottom:170px;
-
-    width:62px;
-    height:62px;
-
-    border-radius:50%;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:white;
-
-    font-size:24px;
-
-    cursor:pointer;
-
-    z-index:999999;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,0.35);
-
-    animation:cartFloat 2s infinite;
-
-}
-
-/* BADGE */
-.cart-float span{
-
-    position:absolute;
-
-    top:-3px;
-    right:-3px;
-
-    width:22px;
-    height:22px;
-
-    border-radius:50%;
-
-    background:#ff004c;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:11px;
-    font-weight:bold;
-
-    color:white;
-
-}
-
-/* ANIMATION */
-@keyframes cartFloat{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-6px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .cart-float{
-
-        width:58px;
-        height:58px;
-
-        font-size:22px;
-
-        right:16px;
-
-        /* POSISI PAS DI ATAS WA */
-        bottom:160px;
-
-    }
-
-}
-
-.cart-float span{
-
-    position:absolute;
-
-    top:-5px;
-    right:-5px;
-
-    width:24px;
-    height:24px;
-
-    border-radius:50%;
-
-    background:red;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:12px;
-    font-weight:bold;
-
-}
-
-/* ========================= */
-/* CHECKOUT POPUP */
-/* ========================= */
-
-.checkout-popup{
-
-    position:fixed;
-
-    inset:0;
-
-    background:
-    rgba(0,0,0,0.75);
-
-    display:none;
-
-    align-items:center;
-    justify-content:center;
-
-    z-index:999999;
-
-}
-
-.checkout-box{
-
-    width:90%;
-    max-width:430px;
-
-    background:#101827;
-
-    border-radius:28px;
-
-    padding:30px;
-
-    position:relative;
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-}
-
-.checkout-box h2{
-
-    margin-bottom:25px;
-
-}
-
-/* CLOSE */
-
-.close-checkout{
-
-    position:absolute;
-
-    top:15px;
-    right:15px;
-
-    width:40px;
-    height:40px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#182235;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-/* CART ITEM */
-
-.cart-item{
-
-    background:#182235;
-
-    padding:15px;
-
-    border-radius:16px;
-
-    margin-bottom:12px;
-
-}
-
-.cart-item h4{
-
-    margin-bottom:6px;
-
-}
-
-.cart-item p{
-
-    color:#00d4ff;
-
-    font-size:14px;
-
-}
-
-/* PACKAGE */
-
-.package-box{
-
-    margin-top:20px;
-
-}
-
-.package-box label{
-
-    display:block;
-
-    margin-bottom:10px;
-
-}
-
-.package-box select{
-
-    width:100%;
-    height:50px;
-
-    border:none;
-    outline:none;
-
-    border-radius:14px;
-
-    background:#182235;
-
-    color:white;
-
-    padding:0 14px;
-
-}
-
-/* TOTAL */
-
-.checkout-total{
-
-    display:flex;
-
-    align-items:center;
-    justify-content:space-between;
-
-    margin:25px 0;
-
-    padding:18px;
-
-    border-radius:18px;
-
-    background:#182235;
-
-}
-
-.checkout-total h3{
-
-    color:#00d4ff;
-
-    font-size:28px;
-
-}
-
-/* BUTTON */
-
-.btn-checkout{
-
-    width:100%;
-    height:54px;
-
-    border:none;
-
-    border-radius:18px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-    font-size:15px;
-    font-weight:600;
-
-    cursor:pointer;
-
-}
-/* ========================= */
-/* REKENING BOX */
-/* ========================= */
-
-.rekening-box{
-
-    background:#182235;
-
-    border-radius:22px;
-
-    padding:22px;
-
-    margin-bottom:20px;
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-}
-
-/* HEADER */
-
-.rekening-header{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    margin-bottom:18px;
-
-}
-
-.rekening-header i{
-
-    width:55px;
-    height:55px;
-
-    border-radius:16px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:22px;
-
-}
-
-.rekening-header h3{
-
-    margin-bottom:3px;
-
-}
-
-.rekening-header p{
-
-    color:#cfcfcf;
-
-    font-size:13px;
-
-}
-
-/* NUMBER */
-
-.rekening-number{
-
-    width:100%;
-
-    height:58px;
-
-    border-radius:16px;
-
-    background:#101827;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:22px;
-    font-weight:700;
-
-    color:#00d4ff;
-
-    letter-spacing:2px;
-
-    margin-bottom:16px;
-
-}
-
-/* BUTTON */
-
-.btn-copy{
-
-    width:100%;
-    height:54px;
-
-    border:none;
-
-    border-radius:16px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-    font-size:15px;
-    font-weight:600;
-
-    cursor:pointer;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    gap:10px;
-
-    transition:0.3s;
-
-}
-
-.btn-copy:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 10px 25px rgba(0,212,255,0.3);
-
-}
-/* ========================= */
-/* CART ITEM */
-/* ========================= */
-
-.cart-item{
-
-    background:#182235;
-
-    border-radius:18px;
-
-    padding:15px;
-
-    margin-bottom:14px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:10px;
-
-}
-
-/* INFO */
-
-.cart-info h4{
-
-    margin-bottom:4px;
-
-    font-size:15px;
-
-}
-
-.cart-info p{
-
-    color:#00d4ff;
-
-    font-size:13px;
-
-}
-
-/* QTY BOX */
-
-.qty-box{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-}
-
-/* BUTTON */
-
-.qty-box button{
-
-    width:32px;
-    height:32px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-}
-
-/* QTY TEXT */
-
-.qty-box span{
-
-    min-width:20px;
-
-    text-align:center;
-
-    font-weight:600;
-
-}
-
-/* REMOVE */
-
-.btn-remove{
-
-    width:38px;
-    height:38px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#ff2e63;
-
-    color:white;
-
-    cursor:pointer;
-
-    flex-shrink:0;
-
-}
-
-/* MOBILE */
-
-@media(max-width:480px){
-
-    .cart-item{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-    }
-
-    .qty-box{
-
-        width:100%;
-
-        justify-content:center;
-
-    }
-
-    .btn-remove{
-
-        width:100%;
-
-    }
-
-}
-/* RESET SEARCH */
-/* ========================= */
-/* SEARCH BOX PREMIUM */
-/* ========================= */
-
-.search-box{
-
-    flex:1;
-
-    max-width:520px;
-
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-/* INPUT */
-
-.search-box input{
-
-    width:100%;
-
-    height:52px;
-
-    border:none;
-    outline:none;
-
-    border-radius:50px;
-
-    background:
-    rgba(18,27,43,0.95);
-
-    backdrop-filter:blur(10px);
-
-    color:white;
-
-    padding:
-    0 105px 0 20px;
-
-    font-size:14px;
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-    transition:0.3s;
-
-    box-shadow:
-    inset 0 0 10px rgba(0,0,0,0.25);
-
-}
-
-/* FOCUS */
-
-.search-box input:focus{
-
-    border-color:#00d4ff;
-
-    box-shadow:
-    0 0 15px rgba(0,212,255,0.25);
-
-}
-
-/* PLACEHOLDER */
-
-.search-box input::placeholder{
-
-    color:#8fa3bf;
-
-}
-
-/* SEARCH BUTTON */
-
-.search-box button{
-
-    position:absolute;
-
-    top:6px;
-
-    width:40px;
-    height:40px;
-
-    border:none;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-}
-
-/* SEARCH ICON */
-
-.search-box button:first-of-type{
-
-    right:8px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-    box-shadow:
-    0 5px 15px rgba(0,212,255,0.3);
-
-}
-
-/* RESET BUTTON */
-
-.btn-reset-search{
-
-    position:absolute;
-
-    right:55px;
-    top:6px;
-
-    width:40px;
-    height:40px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#1c2740;
-
-    color:#d7d7d7;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-}
-
-/* HOVER */
-
-.search-box button:hover,
-.btn-reset-search:hover{
-
-    transform:
-    translateY(-2px)
-    scale(1.05);
-
-}
-
-/* RESET HOVER */
-
-.btn-reset-search:hover{
-
-    background:#00d4ff;
-
-    color:white;
-
-    transform:
-    rotate(180deg)
-    scale(1.05);
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .search-box{
-
-        max-width:100%;
-
-    }
-
-    .search-box input{
-
-        height:48px;
-
-        font-size:13px;
-
-        padding:
-        0 95px 0 16px;
-
-    }
-
-    .search-box button,
-    .btn-reset-search{
-
-        width:36px;
-        height:36px;
-
-        top:6px;
-
-    }
-
-    .btn-reset-search{
-
-        right:48px;
-
-    }
-
-}
-/* ========================= */
-/* CLAIM PROMO */
-/* ========================= */
-
-.claim-promo{
-
-    width:100%;
-
-    max-width:650px;
-
-    margin:30px auto;
-
-    padding:24px;
-
-    border-radius:28px;
-
-    background:
-    linear-gradient(
-    145deg,
-    #101827,
-    #0b1220
-    );
-
-    border:
-    1px solid rgba(255,255,255,0.08);
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,0.35);
-
-    animation:
-    glowPromo 2s infinite alternate;
-
-}
-
-/* GLOW EFFECT */
-
-.claim-promo::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-50px;
-    right:-50px;
-
-    width:180px;
-    height:180px;
-
-    background:
-    rgba(0,212,255,0.15);
-
-    border-radius:50%;
-
-    filter:blur(40px);
-
-}
-
-/* ICON */
-
-.claim-icon{
-
-    min-width:85px;
-    height:85px;
-
-    border-radius:22px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:38px;
-
-    animation:
-    pulsePromo 1.5s infinite;
-
-}
-
-/* CONTENT */
-
-.claim-content{
-
-    flex:1;
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.claim-content small{
-
-    color:#00d4ff;
-
-    font-weight:600;
-
-    letter-spacing:1px;
-
-}
-
-.claim-content h3{
-
-    font-size:30px;
-
-    margin:
-    8px 0 10px;
-
-}
-
-.claim-content p{
-
-    color:#cfcfcf;
-
-    line-height:1.7;
-
-    margin-bottom:16px;
-
-}
-
-/* SLOT */
-
-.slot-box{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:
-    10px 16px;
-
-    border-radius:40px;
-
-    background:
-    rgba(255,255,255,0.06);
-
-    margin-bottom:18px;
-
-    font-size:14px;
-
-}
-
-/* LIVE DOT */
-
-.slot-live{
-
-    width:10px;
-    height:10px;
-
-    border-radius:50%;
-
-    background:#00ff66;
-
-    animation:
-    blinkLive 1s infinite;
-
-}
-
-/* BUTTON */
-
-.claim-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    height:52px;
-
-    padding:
-    0 26px;
-
-    border-radius:18px;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:0.3s;
-
-}
-
-.claim-btn:hover{
-
-    transform:
-    translateY(-3px);
-
-    box-shadow:
-    0 10px 25px rgba(0,212,255,0.3);
-
-}
-
-/* ANIMATION */
-
-@keyframes pulsePromo{
-
-    0%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.08);
-    }
-
-    100%{
-        transform:scale(1);
-    }
-
-}
-
-@keyframes blinkLive{
-
-    0%{
-        opacity:1;
-    }
-
-    50%{
-        opacity:0.3;
-    }
-
-    100%{
-        opacity:1;
-    }
-
-}
-
-@keyframes glowPromo{
-
-    from{
-
-        box-shadow:
-        0 10px 30px rgba(0,212,255,0.15);
-
-    }
-
-    to{
-
-        box-shadow:
-        0 15px 40px rgba(0,212,255,0.3);
-
-    }
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .claim-promo{
-
-        flex-direction:column;
-
-        text-align:center;
-
-        padding:22px;
-
-    }
-
-    .claim-content h3{
-
-        font-size:24px;
-
-    }
-
-}
-/* ========================= */
-/* HERO TITLE */
-/* ========================= */
-
-.hero-title{
-
-    font-size:58px;
-
-    font-weight:800;
-
-    line-height:1.1;
-
-}
-
-/* TEXT ANIMATION */
-
-#changingText{
-
-    display:inline-block;
-
-    background:
-    linear-gradient(
-    45deg,
-    #00d4ff,
-    #00ffae
-    );
-
-    /* STANDARD */
-    background-clip:text;
-
-    /* WEBKIT */
-    -webkit-background-clip:text;
-
-    color:transparent;
-
-    -webkit-text-fill-color:transparent;
-
-    transition:0.5s;
-
-}
-/* FADE IN */
-
-.fade-in{
-
-    animation:
-    fadeInText 0.6s ease;
-
-}
-
-/* FADE OUT */
-
-.fade-out{
-
-    animation:
-    fadeOutText 0.5s ease;
-
-}
-
-/* ANIMATION */
-
-@keyframes fadeInText{
-
-    from{
-
-        opacity:0;
-
-        transform:
-        translateY(10px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-        translateY(0);
-
-    }
-
-}
-
-@keyframes fadeOutText{
-
-    from{
-
-        opacity:1;
-
-        transform:
-        translateY(0);
-
-    }
-
-    to{
-
-        opacity:0;
-
-        transform:
-        translateY(-10px);
-
-    }
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .hero-title{
-
-        font-size:42px;
-
-    }
-
-}
-/* ========================= */
-/* LIVE VISITOR */
-/* ========================= */
-
-.live-visitor{
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    gap:10px;
-
-    width:max-content;
-
-    margin:20px auto;
-
-    padding:
-    12px 20px;
-
-    border-radius:50px;
-
-    background:
-    rgba(16,24,39,0.95);
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-    backdrop-filter:blur(10px);
-
-    color:white;
-
-    font-size:14px;
-    font-weight:500;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,0.25);
-
-    animation:
-    visitorGlow 2s infinite alternate;
-
-}
-
-/* LIVE DOT */
-
-.live-dot{
-
-    width:12px;
-    height:12px;
-
-    border-radius:50%;
-
-    background:#00ff66;
-
-    box-shadow:
-    0 0 10px #00ff66;
-
-    animation:
-    liveBlink 1s infinite;
-
-}
-
-/* NUMBER */
-
-#visitorCount{
-
-    color:#00d4ff;
-
-    font-weight:700;
-
-    font-size:16px;
-
-}
-
-/* GLOW */
-
-@keyframes visitorGlow{
-
-    from{
-
-        box-shadow:
-        0 10px 25px rgba(0,212,255,0.15);
-
-    }
-
-    to{
-
-        box-shadow:
-        0 15px 35px rgba(0,212,255,0.3);
-
-    }
-
-}
-
-/* BLINK */
-
-@keyframes liveBlink{
-
-    0%{
-        opacity:1;
-        transform:scale(1);
-    }
-
-    50%{
-        opacity:0.4;
-        transform:scale(1.2);
-    }
-
-    100%{
-        opacity:1;
-        transform:scale(1);
-    }
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .live-visitor{
-
-        font-size:12px;
-
-        padding:
-        10px 16px;
-
-    }
-
-}
-/* ========================= */
-/* PRICING SECTION */
-/* ========================= */
-
-.pricing-section{
-
-    padding:80px 5%;
-
-}
-
-/* TITLE */
-
-.section-title{
-
-    text-align:center;
-
-    font-size:42px;
-
-    margin-bottom:50px;
-
-}
-
-/* GRID */
-
-.pricing-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:28px;
-
-}
-
-/* CARD */
-
-.pricing-card{
-
-    position:relative;
-
-    background:
-    linear-gradient(
-    145deg,
-    #101827,
-    #0b1220
-    );
-
-    border-radius:30px;
-
-    padding:35px 28px;
-
-    overflow:hidden;
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-    transition:0.4s;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,0.25);
-
-}
-
-/* HOVER */
-
-.pricing-card:hover{
-
-    transform:
-    translateY(-10px);
-
-    box-shadow:
-    0 20px 40px rgba(0,212,255,0.2);
-
-}
-
-/* POPULAR */
-
-.popular-tag{
-
-    position:absolute;
-
-    top:15px;
-    right:-40px;
-
-    background:
-    linear-gradient(45deg,#ff8800,#ff0055);
-
-    color:white;
-
-    padding:
-    8px 45px;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    transform:
-    rotate(35deg);
-
-}
-
-/* BADGE */
-
-.pricing-badge{
-
-    width:max-content;
-
-    padding:
-    8px 16px;
-
-    border-radius:50px;
-
-    background:#1b2a45;
-
-    color:#00d4ff;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    margin-bottom:20px;
-
-}
-
-/* PREMIUM */
-
-.premium-badge{
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-}
-
-/* VIP */
-
-.vip-badge{
-
-    background:
-    linear-gradient(45deg,#ffae00,#ff6600);
-
-    color:white;
-
-}
-
-/* TITLE */
-
-.pricing-card h3{
-
-    font-size:30px;
-
-    margin-bottom:18px;
-
-}
-
-/* PRICE */
-
-.pricing-price{
-
-    font-size:46px;
-
-    font-weight:800;
-
-    color:#00ffae;
-
-    margin-bottom:25px;
-
-}
-
-/* LIST */
-
-.pricing-card ul{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:0 0 30px;
-
-}
-
-.pricing-card ul li{
-
-    margin-bottom:14px;
-
-    color:#d6d6d6;
-
-    font-size:15px;
-
-}
-
-/* BUTTON */
-
-.pricing-btn{
-
-    width:100%;
-
-    height:54px;
-
-    border-radius:18px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    background:
-    linear-gradient(45deg,#00d4ff,#0077ff);
-
-    color:white;
-
-    transition:0.3s;
-
-}
-
-/* PREMIUM BUTTON */
-
-.premium-btn{
-
-    background:
-    linear-gradient(45deg,#ff0055,#ff8800);
-
-}
-
-/* HOVER */
-
-.pricing-btn:hover{
-
-    transform:
-    scale(1.03);
-
-}
-
-/* PREMIUM CARD */
-
-.premium-card{
-
-    border:
-    1px solid rgba(0,212,255,0.25);
-
-    animation:
-    premiumGlow 2s infinite alternate;
-
-}
-
-/* ANIMATION */
-
-@keyframes premiumGlow{
-
-    from{
-
-        box-shadow:
-        0 15px 35px rgba(0,212,255,0.15);
-
-    }
-
-    to{
-
-        box-shadow:
-        0 20px 45px rgba(0,212,255,0.35);
-
-    }
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .section-title{
-
-        font-size:32px;
-
-    }
-
-    .pricing-card{
-
-        padding:28px 22px;
-
-    }
-
-    .pricing-price{
-
-        font-size:38px;
-
-    }
-
-}
-/* ========================= */
-/* FAKE ORDER */
-/* ========================= */
-
-.fake-order{
-
-    position:fixed;
-
-    left:20px;
-    bottom:100px;
-
-    width:320px;
-
-    background:
-    rgba(16,24,39,0.96);
-
-    backdrop-filter:blur(12px);
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-    border-radius:22px;
-
-    padding:12px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    z-index:999999;
-
-    transform:
-    translateX(-400px);
-
-    opacity:0;
-
-    transition:0.6s ease;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,0.35);
-
-}
-
-/* SHOW */
-
-.fake-order.show{
-
-    transform:
-    translateX(0);
-
-    opacity:1;
-
-}
-
-/* IMAGE */
-
-.fake-order img{
-
-    width:68px;
-    height:68px;
-
-    border-radius:16px;
-
-    object-fit:cover;
-
-}
-
-/* CONTENT */
-
-.fake-order-content{
-
-    flex:1;
-
-}
-
-.fake-order-content h4{
-
-    font-size:15px;
-
-    margin-bottom:5px;
-
-    color:white;
-
-}
-
-.fake-order-content p{
-
-    font-size:13px;
-
-    color:#cfcfcf;
-
-    line-height:1.5;
-
-}
-
-/* PRODUCT */
-
-#fakeOrderProduct{
-
-    color:#00d4ff;
-
-    font-weight:700;
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .fake-order{
-
-        width:90%;
-
-        left:5%;
-
-        bottom:90px;
-
-    }
-
-}
-.fake-order{
-
-    transform:translateX(-400px);
-
-    opacity:0;
-
-    transition:0.5s;
-
-}
-
-.fake-order.show{
-
-    transform:translateX(0);
-
-    opacity:1;
-
-}
-</style>
 </head>
 
 <body>
@@ -2684,6 +132,9 @@ onclick="resetSearch()">
         </div>
 
     </div>
+    <a href="tentang.html" class="nav-about">
+    Tentang Kami
+</a>
 <!-- ========================= -->
 <!-- CART BUTTON -->
 <!-- ========================= -->
@@ -2842,6 +293,20 @@ onclick="resetSearch()">
 
 <div class="claim-promo">
 
+    <!-- SLIDER IMAGE -->
+    <div class="promo-slider">
+
+        <img class="promo-slide active"
+        src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+
+        <img class="promo-slide"
+        src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop">
+
+        <img class="promo-slide"
+        src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
     <!-- ICON -->
     <div class="claim-icon">
         🔥
@@ -2855,7 +320,7 @@ onclick="resetSearch()">
         </small>
 
         <h3>
-            3 Lagu Hanya Rp190K
+            2 Lagu Hanya Rp190K
         </h3>
 
         <p>
@@ -2962,22 +427,44 @@ Our Services
     Orang Sedang Melihat Website Ini
 
 </div>
-<h2 class="section-title" id="products">
-Popular Services
+<h2 class="section-title neon-title" id="products">
+    Popular Services
 </h2>
+<!-- ========================= -->
+<!-- FAVORITE FLOAT -->
+<!-- ========================= -->
+
+<div class="favorite-float"
+onclick="openWishlist()">
+
+    ❤️
+
+    <span id="favoriteCount">
+        0
+    </span>
+
+</div>
+
 
 <section class="products">
 
     <div class="card">
 
        <img
-src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop"
-loading="lazy"
-alt="DJ Slow Bass">
+        src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop"
+        loading="lazy"
+        alt="DJ Slow Bass">
+
         <div class="card-content">
+            <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
+             
             <h3>DJ Slow Bass</h3>
-
             <div class="price">
                 Rp100K
             </div>
@@ -3002,7 +489,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Cinematic Remix</h3>
 
             <div class="price">
@@ -3029,7 +522,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Lagu Cover</h3>
 
             <div class="price">
@@ -3056,7 +555,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Backsound Film</h3>
 
             <div class="price">
@@ -3083,7 +588,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>DJ Opus</h3>
 
             <div class="price">
@@ -3110,7 +621,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Breakbeat Full Bass</h3>
 
             <div class="price">
@@ -3137,7 +654,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Jedag Jedug</h3>
 
             <div class="price">
@@ -3164,7 +687,13 @@ alt="DJ Slow Bass">
 ">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>BKB</h3>
 
             <div class="price">
@@ -3190,7 +719,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>DJ Komang</h3>
 
             <div class="price">
@@ -3216,7 +751,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Maman Fvndy</h3>
 
             <div class="price">
@@ -3242,7 +783,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Koploisme</h3>
 
             <div class="price">
@@ -3269,7 +816,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>RawiBeat</h3>
 
             <div class="price">
@@ -3296,7 +849,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Disco Tanah</h3>
 
             <div class="price">
@@ -3322,7 +881,14 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+                
+             </button>
             <h3>EDM</h3>
 
             <div class="price">
@@ -3348,7 +914,13 @@ alt="DJ Slow Bass">
         <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
 
+                <i class="fa-regular fa-heart"></i>
+             </button>
             <h3>Hard Tehcno</h3>
 
             <div class="price">
@@ -3369,8 +941,970 @@ alt="DJ Slow Bass">
 
 </div>
 </div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Velocity</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Aransemen Pop</h3>
+
+            <div class="price">
+                Rp500K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Aransemen Rock</h3>
+
+            <div class="price">
+                Rp500K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>HipHop Koplo</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Single funkot</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Single R&B</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Single EDM</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=1200&auto=format&fit=crop
+">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Single Breakbeat </h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Konsultasi Lirik</h3>
+
+            <div class="price">
+                Rp100K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Buat Musik Drama </h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1461783436728-0a9217714694?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Mixtape Funkot</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Mixtape EDM</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Mixtape Breakbeat</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Remaster Lagu</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop
+">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>STYLE TANTE KHARIS SOPAN  V2</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop
+">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>SREGGAE KINGBOY SOPAN</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>STYLE ELART LA </h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>STYLE CANDU DANVATA</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>STYLE KONDANGAN</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>STYLE VINKY YT </h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+<div class="card">
+
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>STYLE LAMBADA</h3>
+
+            <div class="price">
+                Rp180K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+         <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+</div>
+</div>
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Breakbeat Stadium</h3>
+
+            <div class="price">
+                Rp250K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+    
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Funkot Organ</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+</section>
+<!-- ========================= -->
+<!-- PREMIUM SLIDER BANNER -->
+<!-- ========================= -->
+
+<section class="hero-slider">
+
+    <!-- SLIDE 1 -->
+
+    <div class="slide active">
+
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1600&auto=format&fit=crop">
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+
+            <span class="tag">
+                🔥 Remix Viral 2026
+            </span>
+
+            <h1>
+                DJ Slow Bass Premium
+            </h1>
+
+            <p>
+                Remix modern dengan bass tebal,
+                cinematic sound, dan kualitas studio.
+            </p>
+
+            <a href="#products" class="slide-btn">
+                Explore Remix
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- SLIDE 2 -->
+
+    <div class="slide">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1600&auto=format&fit=crop">
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+
+            <span class="tag">
+                🎧 Audio Production
+            </span>
+
+            <h1>
+                Cinematic Remix Studio
+            </h1>
+
+            <p>
+                Cocok untuk TikTok,
+                YouTube, Reels, dan konten viral.
+            </p>
+
+            <a href="#products" class="slide-btn">
+                Order Sekarang
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- SLIDE 3 -->
+
+    <div class="slide">
+
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1600&auto=format&fit=crop">
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+
+            <span class="tag">
+                ⚡ Full Bass Experience
+            </span>
+
+            <h1>
+                Breakbeat & EDM Remix
+            </h1>
+
+            <p>
+                Sound clean, hentakan powerful,
+                dan siap viral di sosial media.
+            </p>
+
+            <a href="#products" class="slide-btn">
+                Lihat Paket
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- DOTS -->
+
+    <div class="slider-dots">
+
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
 </section>
 
+<!-- ========================= -->
+<!-- FLASH SALE MONDAY -->
+<!-- ========================= -->
+
+<section class="flashsale-section">
+
+    <!-- BACKGROUND -->
+
+    <div class="flashsale-bg"></div>
+
+    <!-- CONTENT -->
+
+    <div class="flashsale-content">
+
+        <!-- BADGE -->
+
+        <div class="flashsale-badge">
+
+            ⚡ FLASH SALE MONDAY
+
+        </div>
+
+        <!-- TITLE -->
+
+        <h1>
+
+            Remix Midnight Sale
+
+        </h1>
+
+        <!-- TEXT -->
+
+        <p>
+
+            Khusus hari <b>Senin Jam 12 Malam</b>
+
+            semua katalog remix hanya
+
+            <span>Rp70.000</span>
+
+            untuk <b>5 orang tercepat</b>.
+
+        </p>
+
+        <!-- COUNTDOWN -->
+
+        <div class="countdown-box">
+
+            <div class="time-box">
+
+                <h2 id="hours">
+                    00
+                </h2>
+
+                <small>Jam</small>
+
+            </div>
+
+            <div class="time-box">
+
+                <h2 id="minutes">
+                    00
+                </h2>
+
+                <small>Menit</small>
+
+            </div>
+
+            <div class="time-box">
+
+                <h2 id="seconds">
+                    00
+                </h2>
+
+                <small>Detik</small>
+
+            </div>
+
+        </div>
+
+        <!-- SLOT -->
+
+        <div class="flash-slot">
+
+            🔥 Tersisa
+            <span id="slotLeft">
+
+                5
+
+            </span>
+
+            Slot Lagi
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <a
+href="https://wa.me/62895368416228?text=Halo%20PW%20Music%20Saya%20ingin%20claim%20Flashsale%20Remix%20Rp70K"
+target="_blank"
+class="flash-btn">
+
+            Claim Flash Sale
+
+        </a>
+
+    </div>
+
+</section>
 <!-- TESTIMONI -->
 
 <h2 class="section-title">
@@ -3463,6 +1997,232 @@ class="wa-float">
 
 </nav>
 <script>
+    /* ========================= */
+/* WISHLIST / FAVORITE */
+/* ========================= */
+
+/* DATA */
+
+let wishlist = [];
+
+/* LOAD LOCAL STORAGE */
+
+if(localStorage.getItem("pwWishlist")){
+
+    wishlist = JSON.parse(
+        localStorage.getItem("pwWishlist")
+    );
+
+}
+
+/* UPDATE FAVORITE */
+
+updateWishlist();
+
+/* ========================= */
+/* TOGGLE FAVORITE */
+/* ========================= */
+
+function toggleFavorite(button,name,image){
+
+    /* CEK APAKAH SUDAH ADA */
+
+    let existingItem =
+    wishlist.find(item => item.name === name);
+
+    /* REMOVE FAVORITE */
+
+    if(existingItem){
+
+        wishlist =
+        wishlist.filter(
+            item => item.name !== name
+        );
+
+        button.classList.remove("active");
+
+        button.innerHTML =
+        '<i class="fa-regular fa-heart"></i>';
+
+    }
+
+    /* ADD FAVORITE */
+
+    else{
+
+        wishlist.push({
+
+            name:name,
+            image:image
+
+        });
+
+        button.classList.add("active");
+
+        button.innerHTML =
+        '<i class="fa-solid fa-heart"></i>';
+
+    }
+
+    /* SAVE STORAGE */
+
+    localStorage.setItem(
+
+        "pwWishlist",
+
+        JSON.stringify(wishlist)
+
+    );
+
+    /* UPDATE UI */
+
+    updateWishlist();
+
+}
+
+/* ========================= */
+/* UPDATE WISHLIST */
+/* ========================= */
+
+function updateWishlist(){
+
+    const wishlistItems =
+    document.getElementById(
+    "wishlistItems"
+    );
+
+    const favoriteCount =
+    document.getElementById(
+    "favoriteCount"
+    );
+
+    /* JIKA ELEMENT BELUM ADA */
+
+    if(!wishlistItems || !favoriteCount){
+
+        return;
+
+    }
+
+    /* RESET */
+
+    wishlistItems.innerHTML = "";
+
+    /* TOTAL */
+
+    favoriteCount.innerText =
+    wishlist.length;
+
+    /* LOOP DATA */
+
+    wishlist.forEach((item,index)=>{
+
+        wishlistItems.innerHTML += `
+
+        <div class="wishlist-item">
+
+            <img
+            src="${item.image}">
+
+            <div class="wishlist-info">
+
+                <h4>${item.name}</h4>
+
+            </div>
+
+            <button
+            class="remove-favorite"
+            onclick="removeWishlist(${index})">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+/* ========================= */
+/* REMOVE FAVORITE */
+/* ========================= */
+
+function removeWishlist(index){
+
+    wishlist.splice(index,1);
+
+    localStorage.setItem(
+
+        "pwWishlist",
+
+        JSON.stringify(wishlist)
+
+    );
+
+    updateWishlist();
+
+}
+
+/* ========================= */
+/* OPEN POPUP */
+/* ========================= */
+
+function openWishlist(){
+
+    document.getElementById(
+    "wishlistPopup"
+    ).style.display = "flex";
+
+}
+
+/* ========================= */
+/* CLOSE POPUP */
+/* ========================= */
+
+function closeWishlist(){
+
+    document.getElementById(
+    "wishlistPopup"
+    ).style.display = "none";
+
+}
+document.addEventListener("DOMContentLoaded",()=>{
+
+    /* AMBIL SEMUA SLIDE */
+    const slides =
+    document.querySelectorAll(".promo-slide");
+
+    let currentSlide = 0;
+
+    /* AUTO SLIDE */
+    setInterval(()=>{
+
+        /* HAPUS ACTIVE */
+        slides[currentSlide]
+        .classList.remove("active");
+
+        /* NEXT */
+        currentSlide++;
+
+        /* RESET */
+        if(currentSlide >= slides.length){
+
+            currentSlide = 0;
+
+        }
+
+        /* TAMBAH ACTIVE */
+        slides[currentSlide]
+        .classList.add("active");
+
+    },3000);
+
+});
+
+
     /* ========================= */
 /* SEARCH PRODUCT FUNCTION */
 /* ========================= */
@@ -4230,7 +2990,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* ========================= */
+/* PREMIUM SLIDER */
+/* ========================= */
 
+const slides =
+document.querySelectorAll(".slide");
+
+const dots =
+document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+/* SHOW SLIDE */
+
+function showSlide(index){
+
+    slides.forEach(slide => {
+
+        slide.classList.remove("active");
+
+    });
+
+    dots.forEach(dot => {
+
+        dot.classList.remove("active");
+
+    });
+
+    slides[index]
+    .classList.add("active");
+
+    dots[index]
+    .classList.add("active");
+
+}
+
+/* AUTO SLIDE */
+
+setInterval(() => {
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+
+        currentSlide = 0;
+
+    }
+
+    showSlide(currentSlide);
+
+},5000);
+
+/* CLICK DOT */
+
+dots.forEach((dot,index) => {
+
+    dot.addEventListener(
+    "click",
+    () => {
+
+        currentSlide = index;
+
+        showSlide(currentSlide);
+
+    });
+
+});
 </script>
 <!-- ========================= -->
 <!-- POPUP PROMO -->
