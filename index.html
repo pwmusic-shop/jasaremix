@@ -88,7 +88,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -262,6 +263,125 @@ onclick="resetSearch()">
 
 </section>
 
+
+<!-- CHAT BOX -->
+
+<!-- ========================= -->
+<!-- AI CHAT BUTTON -->
+<!-- ========================= -->
+
+<div class="ai-chat-toggle"
+onclick="toggleAIChat()">
+
+    <i class="fa-solid fa-robot"></i>
+
+</div>
+
+<!-- ========================= -->
+<!-- AI CHAT BOX -->
+<!-- ========================= -->
+
+<div class="ai-chat-box"
+id="aiChatBox">
+
+    <!-- HEADER -->
+
+    <div class="ai-chat-header">
+
+        <h3>
+            PW Music AI
+        </h3>
+
+    </div>
+
+    <!-- BODY -->
+
+    <div class="ai-chat-body"
+    id="aiChatBody">
+
+        <!-- BOT -->
+
+        <div class="ai-message bot">
+
+            Halo 👋<br><br>
+
+            Mau remix style apa hari ini?
+
+        </div>
+
+    </div>
+
+    <!-- QUICK BUTTON -->
+
+    <div class="ai-quick-reply">
+
+        <button onclick="quickReply('DJ Slow Bass')">
+
+            DJ Slow Bass
+
+        </button>
+
+        <button onclick="quickReply('Breakbeat')">
+
+            Breakbeat
+
+        </button>
+
+        <button onclick="quickReply('Funkot')">
+
+            Funkot
+
+        </button>
+
+    </div>
+
+    <!-- INPUT -->
+
+    <div class="ai-chat-input">
+
+        <input
+        type="text"
+        id="aiInput"
+        placeholder="Ketik pesan...">
+
+        <button
+        onclick="sendAIMessage()">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- QUICK BUTTON -->
+
+  <h1>
+    Mau Pesan
+    <span>Remix</span>
+    Apa ?
+</h1>
+
+    <!-- INPUT -->
+
+    <div class="ai-chat-input">
+
+        <input
+        type="text"
+        id="aiInput"
+        placeholder="Ketik pesan...">
+
+        <button onclick="sendAIMessage()">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
 <!-- STATS -->
 
 <section class="stats">
@@ -350,6 +470,197 @@ onclick="resetSearch()">
     </div>
 
 </div>
+
+<!-- ========================= -->
+<!-- AFFILIATE SECTION -->
+<!-- ========================= -->
+
+<section class="affiliate-section">
+
+    <!-- GLOW -->
+
+    <div class="affiliate-glow"></div>
+
+    <!-- HEADER -->
+
+    <div class="affiliate-header">
+
+        <span class="affiliate-tag">
+            💸 PW MUSIC AFFILIATE
+        </span>
+
+        <h2>
+            Hasilkan Uang Dari Remix
+        </h2>
+
+        <p>
+            Bagikan link affiliate PW Music
+            dan dapatkan komisi otomatis
+            setiap ada customer order.
+        </p>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="affiliate-wrapper">
+
+        <!-- LEFT -->
+
+        <div class="affiliate-left">
+
+            <div class="affiliate-card">
+
+                <div class="affiliate-icon">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+
+                <h3>
+                    Komisi Hingga 20%
+                </h3>
+
+                <p>
+                    Setiap penjualan remix
+                    melalui link affiliate kamu
+                    akan mendapatkan komisi otomatis.
+                </p>
+
+            </div>
+
+            <div class="affiliate-card">
+
+                <div class="affiliate-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>
+                    Dashboard Statistik
+                </h3>
+
+                <p>
+                    Pantau klik,
+                    penjualan,
+                    komisi,
+                    dan penghasilan realtime.
+                </p>
+
+            </div>
+
+            <div class="affiliate-card">
+
+                <div class="affiliate-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>
+                    Withdraw Cepat
+                </h3>
+
+                <p>
+                    Tarik saldo affiliate
+                    langsung ke rekening
+                    atau e-wallet.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="affiliate-box">
+
+            <div class="affiliate-income">
+
+                <small>
+                    Potensi Penghasilan
+                </small>
+
+                <h1>
+                    Rp2.5JT+
+                </h1>
+
+                <span>
+                    /bulan
+                </span>
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="affiliate-input">
+
+                <input
+                type="text"
+                id="affiliateLink"
+                value="https://pwmusic-shop.github.io/jasa-remix-market/"
+                readonly>
+
+                <button onclick="copyAffiliate()">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                </button>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <a href="#"
+            class="affiliate-btn">
+
+                Join Affiliate
+
+            </a>
+
+            <!-- STATS -->
+
+            <div class="affiliate-stats">
+
+                <div>
+
+                    <h3>
+                        1.2K+
+                    </h3>
+
+                    <p>
+                        Affiliate Aktif
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        8.9K+
+                    </h3>
+
+                    <p>
+                        Klik Link
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Rp89JT
+                    </h3>
+
+                    <p>
+                        Total Komisi
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- SERVICES -->
 
 <h2 class="section-title" id="services">
@@ -445,7 +756,42 @@ onclick="openWishlist()">
 
 </div>
 
+<!-- ========================= -->
+<!-- SORTING PRODUK -->
+<!-- LETAKKAN DI ATAS .products -->
+<!-- ========================= -->
 
+<div class="sort-box">
+
+    <label>
+        Urutkan:
+    </label>
+
+    <select id="sortProducts">
+
+        <option value="default">
+            Default
+        </option>
+
+        <option value="low">
+            Harga Termurah
+        </option>
+
+        <option value="high">
+            Harga Termahal
+        </option>
+
+        <option value="az">
+            Nama A-Z
+        </option>
+
+        <option value="za">
+            Nama Z-A
+        </option>
+
+    </select>
+
+</div>
 <section class="products">
 
     <div class="card">
@@ -1684,6 +2030,72 @@ onclick="openWishlist()">
         </div>
 
     </div>
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>Becak</h3>
+
+            <div class="price">
+                Rp120K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
+       <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop">
+
+        <div class="card-content">
+             <button class="favorite-btn"
+                onclick="toggleFavorite(this,
+                'DJ Slow Bass',
+                'https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop')">
+
+                <i class="fa-regular fa-heart"></i>
+             </button>
+            <h3>BBHC</h3>
+
+            <div class="price">
+                Rp250K
+            </div>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+           <a href="#"
+            class="btn-order"
+            onclick="addToCart('DJ Slow Bass',100000)">
+
+            Add To Cart
+
+            </a>
+
+        </div>
+
+    </div>
 </section>
 <!-- ========================= -->
 <!-- PREMIUM SLIDER BANNER -->
@@ -1997,6 +2409,195 @@ class="wa-float">
 
 </nav>
 <script>
+    /* ========================= */
+/* TOGGLE AI CHAT */
+/* ========================= */
+
+function toggleAIChat(){
+
+    const chat =
+    document.getElementById(
+    "aiChatBox"
+    );
+
+    chat.classList.toggle(
+    "active"
+    );
+
+}
+setTimeout(()=>{
+
+    document
+    .getElementById("aiChatBox")
+    .classList.add("active");
+
+},5000);
+setTimeout(()=>{
+
+    document
+    .getElementById("aiChatBox")
+    .classList.remove("active");
+
+},12000);
+    /* ========================= */
+/* TOGGLE CHAT */
+/* ========================= */
+
+function toggleAIChat(){
+
+    const chat =
+    document.getElementById(
+    "aiChatBox"
+    );
+
+    if(chat.style.display === "flex"){
+
+        chat.style.display = "none";
+
+    }else{
+
+        chat.style.display = "flex";
+
+    }
+
+}
+
+/* ========================= */
+/* SEND MESSAGE */
+/* ========================= */
+
+function sendAIMessage(){
+
+    const input =
+    document.getElementById(
+    "aiInput"
+    );
+
+    const body =
+    document.getElementById(
+    "aiChatBody"
+    );
+
+    const text =
+    input.value.trim();
+
+    if(text === "") return;
+
+    /* USER MESSAGE */
+
+    const userMessage =
+    document.createElement("div");
+
+    userMessage.className =
+    "ai-message user";
+
+    userMessage.innerHTML = text;
+
+    body.appendChild(userMessage);
+
+    /* AUTO SCROLL */
+
+    body.scrollTop =
+    body.scrollHeight;
+
+    /* CLEAR */
+
+    input.value = "";
+
+    /* BOT REPLY */
+
+    setTimeout(()=>{
+
+        const botMessage =
+        document.createElement("div");
+
+        botMessage.className =
+        "ai-message bot";
+
+        let reply = "";
+
+        /* AUTO RESPONSE */
+
+        if(text.toLowerCase().includes("breakbeat")){
+
+            reply =
+            "🔥 Breakbeat cocok untuk lagu dengan vibe energik dan party.";
+
+        }
+
+        else if(text.toLowerCase().includes("funkot")){
+
+            reply =
+            "🎶 Funkot cocok untuk style DJ cepat dengan bass kuat.";
+
+        }
+
+        else if(text.toLowerCase().includes("slow")){
+
+            reply =
+            "💙 Slow bass cocok untuk lagu santai dan emotional.";
+
+        }
+
+        else{
+
+            reply =
+            "🎧 Kami punya banyak style remix seperti Breakbeat, Funkot, DJ Slow Bass, Cinematic, dan lainnya.";
+
+        }
+
+        botMessage.innerHTML =
+        reply;
+
+        body.appendChild(botMessage);
+
+        body.scrollTop =
+        body.scrollHeight;
+
+    },700);
+
+}
+
+/* ========================= */
+/* QUICK REPLY */
+/* ========================= */
+
+function quickReply(text){
+
+    document.getElementById(
+    "aiInput"
+    ).value = text;
+
+    sendAIMessage();
+
+}
+    /* ========================= */
+/* COPY AFFILIATE LINK */
+/* ========================= */
+
+function copyAffiliate(){
+
+    const affiliateInput =
+    document.getElementById(
+    "affiliateLink"
+    );
+
+    affiliateInput.select();
+
+    affiliateInput.setSelectionRange(
+    0,
+    99999
+    );
+
+    navigator.clipboard.writeText(
+    affiliateInput.value
+    );
+
+    alert(
+    "Link affiliate berhasil disalin 🔥"
+    );
+
+}
     /* ========================= */
 /* WISHLIST / FAVORITE */
 /* ========================= */
@@ -3057,6 +3658,149 @@ dots.forEach((dot,index) => {
     });
 
 });
+
+/* ========================= */
+/* SORTING PRODUCTS */
+/* ========================= */
+
+const sortSelect =
+document.getElementById("sortProducts");
+
+const productsContainer =
+document.querySelector(".products");
+
+/* SORT EVENT */
+
+sortSelect.addEventListener(
+"change",
+sortProducts
+);
+
+function sortProducts(){
+
+    const cards = Array.from(
+        document.querySelectorAll(".products .card")
+    );
+
+    const value = sortSelect.value;
+
+    /* DEFAULT */
+
+    if(value === "default"){
+
+        cards.sort((a,b) => 0);
+
+    }
+
+    /* TERMURAH */
+
+    if(value === "low"){
+
+        cards.sort((a,b)=>{
+
+            let priceA =
+            parseInt(
+            a.querySelector(".price")
+            .innerText
+            .replace(/[^0-9]/g,"")
+            );
+
+            let priceB =
+            parseInt(
+            b.querySelector(".price")
+            .innerText
+            .replace(/[^0-9]/g,"")
+            );
+
+            return priceA - priceB;
+
+        });
+
+    }
+
+    /* TERMAHAL */
+
+    if(value === "high"){
+
+        cards.sort((a,b)=>{
+
+            let priceA =
+            parseInt(
+            a.querySelector(".price")
+            .innerText
+            .replace(/[^0-9]/g,"")
+            );
+
+            let priceB =
+            parseInt(
+            b.querySelector(".price")
+            .innerText
+            .replace(/[^0-9]/g,"")
+            );
+
+            return priceB - priceA;
+
+        });
+
+    }
+
+    /* NAMA A-Z */
+
+    if(value === "az"){
+
+        cards.sort((a,b)=>{
+
+            let nameA =
+            a.querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+            let nameB =
+            b.querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+            return nameA.localeCompare(nameB);
+
+        });
+
+    }
+
+    /* NAMA Z-A */
+
+    if(value === "za"){
+
+        cards.sort((a,b)=>{
+
+            let nameA =
+            a.querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+            let nameB =
+            b.querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+            return nameB.localeCompare(nameA);
+
+        });
+
+    }
+
+    /* RESET */
+
+    productsContainer.innerHTML = "";
+
+    /* TAMPILKAN ULANG */
+
+    cards.forEach(card => {
+
+        productsContainer.appendChild(card);
+
+    });
+
+}
 </script>
 <!-- ========================= -->
 <!-- POPUP PROMO -->
